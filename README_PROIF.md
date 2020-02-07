@@ -3,28 +3,31 @@
 ## Persiapan
 
 1. Install Dependency (`npm install`)
-
-TBC~
+2. Jalankan `npm run dev` untuk memulai _development server_ (baca _log_ untuk mengetahui server listen di port berapa)
+3. Test _endpoint_ bagian anda menggunakan HTTP client seperti Postman, Insomnia, atau cURL
+4. Happy ~~coding~~ developing~
 
 ## Daftar _Endpoint_ yang Harus Dikerjakan
 
-1. POST /api/Booking/CreateSession
+Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL pada aplikasi untuk testing
 
-2. POST /api/Booking/CancelSession
+1. POST /api/Booking/CreateSession -> /api/booking/create_session
 
-3. GET /api/ticketing/availableTickets/{BookingSessionId}
+2. POST /api/Booking/CancelSession -> /api/booking/cancel_session
 
-4. POST /api/ticketing/selectTickets
+3. GET /api/ticketing/availableTickets/{BookingSessionId} -> /api/ticketing/available_tickets/:id
 
-5. GET /api/seating/getLayout/{bookingSessionId}
+4. POST /api/ticketing/selectTickets -> /api/ticketing/select_tickets
 
-6. POST /api/Seating/SelectSeats
+5. GET /api/seating/getLayout/{bookingSessionId} -> /api/seating/get_layout/:id
 
-7. POST /api/Booking/Complete
+6. POST /api/Seating/SelectSeats -> /api/seating/select_seats
 
-8. GET /api/Orders/Summary/{externalOrderId}
+7. POST /api/Booking/Complete -> /api/booking/complete
 
-9. GET api/Orders/BookingSession/{bookingSessionId}
+8. ~~GET /api/Orders/Summary/{externalOrderId}~~ (duplikat)
+
+9. GET /api/Orders/BookingSession/{bookingSessionId} -> /api/orders/booking_session/:id
 
 Catatan: Seluruh dokumentasi _endpoint_ __SUDAH ADA__ di `docs/swagger.json`
 

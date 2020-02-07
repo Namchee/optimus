@@ -56,6 +56,11 @@ module.exports = (allConfig) => {
     // -- Compatibility APIs --
     getCompatibility: (caller, osType, exhibitorCode) => {
       return require('./src/CompatibilityApi').getCompatibility(allConfig, caller, osType, exhibitorCode)
+    },
+
+    // -- Seating APIs --
+    getSeatingLayout: (id) => {
+
     }
   }
 }
