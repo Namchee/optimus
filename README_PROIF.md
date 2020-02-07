@@ -3,9 +3,10 @@
 ## Persiapan
 
 1. Install Dependency (`npm install`)
-2. Jalankan `npm run dev` untuk memulai _development server_ (baca _log_ untuk mengetahui server listen di port berapa)
-3. Test _endpoint_ bagian anda menggunakan HTTP client seperti Postman, Insomnia, atau cURL
-4. Happy ~~coding~~ developing~
+2. Letakkan _file_ `.env` yang sudah diberikan di _root_ folder
+3. Jalankan `npm run dev` untuk memulai _development server_ (baca _log_ untuk mengetahui server listen di port berapa)
+4. Test _endpoint_ bagian anda menggunakan HTTP client seperti Postman, Insomnia, atau cURL
+5. Happy ~~coding~~ developing~
 
 ## Daftar _Endpoint_ yang Harus Dikerjakan
 
