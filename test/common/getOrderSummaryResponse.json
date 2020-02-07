@@ -1,0 +1,71 @@
+{
+  "data": {
+    "booking": {
+      "name": "Anne Claire ",
+      "email": "anne-claire.femia@webedia-group.com",
+      "reference": "A0920292463",
+      "performance": {
+        "exhibitor": "Prospector",
+        "theater": "Prospector Ridgefield",
+        "movie": {
+          "title": "Abominable",
+          "poster": "https://www.movienewsletters.net/photos/243084H1.jpg",
+          "certification": "PG"
+        },
+        "screen": "Theater 1",
+        "dateTime": "2019-09-27T13:45:00"
+      },
+      "tickets": [
+        {
+          "name": "CHILD",
+          "quantity": 1
+        }
+      ],
+      "seats": []
+    },
+    "charges": {
+      "currency": "USD",
+      "total": 1000,
+      "tax": 0,
+      "summary": [
+        {
+          "type": "Tickets",
+          "name": "CHILD",
+          "quantity": 1,
+          "cost": 800,
+          "amount": 800
+        },
+        {
+          "type": "BookingFee",
+          "name": "Service Charge",
+          "quantity": 1,
+          "cost": 100,
+          "amount": 100
+        },
+        {
+          "type": "Donation",
+          "name": "Donation",
+          "quantity": 1,
+          "cost": 100,
+          "amount": 100
+        }
+      ]
+    },
+    "payments": {
+      "billing": {
+        "name": "Anne Claire ",
+        "email": "anne-claire.femia@webedia-group.com",
+        "zipCode": ""
+      },
+      "currency": "USD",
+      "total": 1000,
+      "tax": 0,
+      "summary": [
+        {
+          "type": "Card",
+          "amount": 1000
+        }
+      ]
+    }
+  }
+}

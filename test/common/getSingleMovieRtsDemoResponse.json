@@ -1,0 +1,716 @@
+{
+  "data": {
+      "theaters": [
+          {
+              "showdates": [
+                  {
+                      "date": "2019-12-17T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352838",
+                              "startDateTime": "2019-12-17T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106275000004?source=app"
+                          },
+                          {
+                              "id": "12352839",
+                              "startDateTime": "2019-12-17T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106278000004?source=app"
+                          },
+                          {
+                              "id": "12352840",
+                              "startDateTime": "2019-12-17T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106277000004?source=app"
+                          },
+                          {
+                              "id": "12352841",
+                              "startDateTime": "2019-12-17T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106276000004?source=app"
+                          },
+                          {
+                              "id": "12352842",
+                              "startDateTime": "2019-12-17T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106274000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-18T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352843",
+                              "startDateTime": "2019-12-18T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106308000004?source=app"
+                          },
+                          {
+                              "id": "12352844",
+                              "startDateTime": "2019-12-18T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106311000004?source=app"
+                          },
+                          {
+                              "id": "12352845",
+                              "startDateTime": "2019-12-18T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106310000004?source=app"
+                          },
+                          {
+                              "id": "12352846",
+                              "startDateTime": "2019-12-18T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106309000004?source=app"
+                          },
+                          {
+                              "id": "12352847",
+                              "startDateTime": "2019-12-18T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106307000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-19T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352848",
+                              "startDateTime": "2019-12-19T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106341000004?source=app"
+                          },
+                          {
+                              "id": "12352849",
+                              "startDateTime": "2019-12-19T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106344000004?source=app"
+                          },
+                          {
+                              "id": "12352850",
+                              "startDateTime": "2019-12-19T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106343000004?source=app"
+                          },
+                          {
+                              "id": "12352851",
+                              "startDateTime": "2019-12-19T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106342000004?source=app"
+                          },
+                          {
+                              "id": "12352852",
+                              "startDateTime": "2019-12-19T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106340000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-20T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352853",
+                              "startDateTime": "2019-12-20T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106374000004?source=app"
+                          },
+                          {
+                              "id": "12352854",
+                              "startDateTime": "2019-12-20T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106377000004?source=app"
+                          },
+                          {
+                              "id": "12352855",
+                              "startDateTime": "2019-12-20T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106376000004?source=app"
+                          },
+                          {
+                              "id": "12352856",
+                              "startDateTime": "2019-12-20T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106375000004?source=app"
+                          },
+                          {
+                              "id": "12352857",
+                              "startDateTime": "2019-12-20T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106373000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-21T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352858",
+                              "startDateTime": "2019-12-21T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106407000004?source=app"
+                          },
+                          {
+                              "id": "12352859",
+                              "startDateTime": "2019-12-21T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106410000004?source=app"
+                          },
+                          {
+                              "id": "12352860",
+                              "startDateTime": "2019-12-21T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106409000004?source=app"
+                          },
+                          {
+                              "id": "12352861",
+                              "startDateTime": "2019-12-21T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106408000004?source=app"
+                          },
+                          {
+                              "id": "12352862",
+                              "startDateTime": "2019-12-21T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106406000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-22T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352863",
+                              "startDateTime": "2019-12-22T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106440000004?source=app"
+                          },
+                          {
+                              "id": "12352864",
+                              "startDateTime": "2019-12-22T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106443000004?source=app"
+                          },
+                          {
+                              "id": "12352865",
+                              "startDateTime": "2019-12-22T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106442000004?source=app"
+                          },
+                          {
+                              "id": "12352866",
+                              "startDateTime": "2019-12-22T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106441000004?source=app"
+                          },
+                          {
+                              "id": "12352867",
+                              "startDateTime": "2019-12-22T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106439000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-23T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352868",
+                              "startDateTime": "2019-12-23T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106473000004?source=app"
+                          },
+                          {
+                              "id": "12352869",
+                              "startDateTime": "2019-12-23T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106476000004?source=app"
+                          },
+                          {
+                              "id": "12352870",
+                              "startDateTime": "2019-12-23T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106475000004?source=app"
+                          },
+                          {
+                              "id": "12352871",
+                              "startDateTime": "2019-12-23T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106474000004?source=app"
+                          },
+                          {
+                              "id": "12352872",
+                              "startDateTime": "2019-12-23T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106472000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-24T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352873",
+                              "startDateTime": "2019-12-24T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106506000004?source=app"
+                          },
+                          {
+                              "id": "12352874",
+                              "startDateTime": "2019-12-24T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106509000004?source=app"
+                          },
+                          {
+                              "id": "12352875",
+                              "startDateTime": "2019-12-24T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106508000004?source=app"
+                          },
+                          {
+                              "id": "12352876",
+                              "startDateTime": "2019-12-24T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106507000004?source=app"
+                          },
+                          {
+                              "id": "12352877",
+                              "startDateTime": "2019-12-24T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106505000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-25T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352878",
+                              "startDateTime": "2019-12-25T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106539000004?source=app"
+                          },
+                          {
+                              "id": "12352879",
+                              "startDateTime": "2019-12-25T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106542000004?source=app"
+                          },
+                          {
+                              "id": "12352880",
+                              "startDateTime": "2019-12-25T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106541000004?source=app"
+                          },
+                          {
+                              "id": "12352881",
+                              "startDateTime": "2019-12-25T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106540000004?source=app"
+                          },
+                          {
+                              "id": "12352882",
+                              "startDateTime": "2019-12-25T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106538000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-26T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352883",
+                              "startDateTime": "2019-12-26T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106572000004?source=app"
+                          },
+                          {
+                              "id": "12352884",
+                              "startDateTime": "2019-12-26T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106575000004?source=app"
+                          },
+                          {
+                              "id": "12352885",
+                              "startDateTime": "2019-12-26T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106574000004?source=app"
+                          },
+                          {
+                              "id": "12352886",
+                              "startDateTime": "2019-12-26T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106573000004?source=app"
+                          },
+                          {
+                              "id": "12352887",
+                              "startDateTime": "2019-12-26T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106571000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-27T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352888",
+                              "startDateTime": "2019-12-27T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106605000004?source=app"
+                          },
+                          {
+                              "id": "12352889",
+                              "startDateTime": "2019-12-27T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106608000004?source=app"
+                          },
+                          {
+                              "id": "12352890",
+                              "startDateTime": "2019-12-27T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106607000004?source=app"
+                          },
+                          {
+                              "id": "12352891",
+                              "startDateTime": "2019-12-27T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106606000004?source=app"
+                          },
+                          {
+                              "id": "12352892",
+                              "startDateTime": "2019-12-27T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106604000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-28T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352893",
+                              "startDateTime": "2019-12-28T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106638000004?source=app"
+                          },
+                          {
+                              "id": "12352894",
+                              "startDateTime": "2019-12-28T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106641000004?source=app"
+                          },
+                          {
+                              "id": "12352895",
+                              "startDateTime": "2019-12-28T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106640000004?source=app"
+                          },
+                          {
+                              "id": "12352896",
+                              "startDateTime": "2019-12-28T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106639000004?source=app"
+                          },
+                          {
+                              "id": "12352897",
+                              "startDateTime": "2019-12-28T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106637000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-29T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352898",
+                              "startDateTime": "2019-12-29T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106671000004?source=app"
+                          },
+                          {
+                              "id": "12352899",
+                              "startDateTime": "2019-12-29T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106674000004?source=app"
+                          },
+                          {
+                              "id": "12352900",
+                              "startDateTime": "2019-12-29T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106673000004?source=app"
+                          },
+                          {
+                              "id": "12352901",
+                              "startDateTime": "2019-12-29T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106672000004?source=app"
+                          },
+                          {
+                              "id": "12352902",
+                              "startDateTime": "2019-12-29T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106670000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-30T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352903",
+                              "startDateTime": "2019-12-30T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106704000004?source=app"
+                          },
+                          {
+                              "id": "12352904",
+                              "startDateTime": "2019-12-30T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106707000004?source=app"
+                          },
+                          {
+                              "id": "12352905",
+                              "startDateTime": "2019-12-30T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106706000004?source=app"
+                          },
+                          {
+                              "id": "12352906",
+                              "startDateTime": "2019-12-30T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106705000004?source=app"
+                          },
+                          {
+                              "id": "12352907",
+                              "startDateTime": "2019-12-30T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106703000004?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-31T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12352908",
+                              "startDateTime": "2019-12-31T11:20:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106737000004?source=app"
+                          },
+                          {
+                              "id": "12352909",
+                              "startDateTime": "2019-12-31T13:40:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106740000004?source=app"
+                          },
+                          {
+                              "id": "12352910",
+                              "startDateTime": "2019-12-31T15:50:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106739000004?source=app"
+                          },
+                          {
+                              "id": "12352911",
+                              "startDateTime": "2019-12-31T18:05:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106738000004?source=app"
+                          },
+                          {
+                              "id": "12352912",
+                              "startDateTime": "2019-12-31T20:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": true,
+                              "attributes": [],
+                              "redirectTicketingUrl": "https://rts.wmpro.uk/StartTicketing/5_2235/106736000004?source=app"
+                          }
+                      ]
+                  }
+              ],
+              "boxofficeId": "X0TMC",
+              "id": "7869",
+              "name": "RTS Test",
+              "location": {
+                  "address1": "25 Prospect Street",
+                  "address2": null,
+                  "city": "Ridgefield",
+                  "state": "CT",
+                  "zipCode": "06877",
+                  "geolocation": {
+                      "latitude": 41.2837855,
+                      "longitude": -73.4973734
+                  }
+              },
+              "image": "https://fr.web.img4.acsta.net/img/07/d9/07d938fbe8037c92882aa4111e81ece7.jpg"
+          }
+      ],
+      "id": "302568",
+      "cinemaSourceId": null,
+      "title": "DORA AND THE LOST CITY",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 0,
+      "releaseType": "NowPlaying",
+      "photoGallery": [],
+      "certification": "PG",
+      "duration": "90",
+      "longSynopsis": null,
+      "shortSynopsis": null,
+      "trailer": null,
+      "cast": [],
+      "director": [],
+      "mediaItems": [],
+      "review": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "data": [
+    {
+      "boxofficeId": "X0TMC",
+      "id": "7871",
+      "name": "Prospector Ridgefield",
+      "location": {
+        "address1": null,
+        "address2": null,
+        "city": null,
+        "state": null,
+        "zipCode": null,
+        "geolocation": {
+          "latitude": 0.0,
+          "longitude": 0.0
+        }
+      },
+      "image": "https://fr.web.img4.acsta.net/img/07/d9/07d938fbe8037c92882aa4111e81ece7.jpg"
+    }
+  ]
+}

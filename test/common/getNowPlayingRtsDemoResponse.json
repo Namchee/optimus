@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "isScheduled": true,
+      "id": "302568",
+      "cinemaSourceId": null,
+      "title": "DORA AND THE LOST CITY",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 0,
+      "releaseType": "NowPlaying",
+      "certification": "PG",
+      "duration": "90",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "297490",
+      "cinemaSourceId": null,
+      "title": "DUMBO",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 1,
+      "releaseType": "NowPlaying",
+      "certification": "PG",
+      "duration": "89",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "305918",
+      "cinemaSourceId": null,
+      "title": "FROZEN II",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 2,
+      "releaseType": "NowPlaying",
+      "certification": "R",
+      "duration": "150",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "302569",
+      "cinemaSourceId": null,
+      "title": "GEMINI MAN",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 3,
+      "releaseType": "NowPlaying",
+      "certification": "",
+      "duration": "110",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "302570",
+      "cinemaSourceId": null,
+      "title": "IT CHAPTER TWO",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 4,
+      "releaseType": "NowPlaying",
+      "certification": "R",
+      "duration": "90",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "302550",
+      "cinemaSourceId": null,
+      "title": "LION KING",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 5,
+      "releaseType": "NowPlaying",
+      "certification": "PG13",
+      "duration": "90",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "302571",
+      "cinemaSourceId": null,
+      "title": "OVERCOMER",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 6,
+      "releaseType": "NowPlaying",
+      "certification": "PG",
+      "duration": "80",
+      "mediaItems": []
+    },
+    {
+      "isScheduled": true,
+      "id": "297491",
+      "cinemaSourceId": null,
+      "title": "PET SEMATARY",
+      "releaseDate": "2019-12-17T00:00:00",
+      "sortOrder": 7,
+      "releaseType": "NowPlaying",
+      "certification": "R",
+      "duration": "110",
+      "mediaItems": []
+    }
+  ]
+}

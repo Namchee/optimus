@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "isScheduled": true,
+      "id": "121-275172",
+      "cinemaSourceId": 275172,
+      "title": "Jumanji: The Next Level",
+      "releaseDate": "2019-12-13T00:00:00",
+      "sortOrder": 1,
+      "releaseType": "NowPlaying",
+      "certification": "PG13",
+      "duration": "114",
+      "mediaItems": [
+        {
+          "type": "Trailer",
+          "url": "https://media.westworldmedia.com/mp4/275172_high.mp4"
+        },
+        {
+          "type": "Still",
+          "url": "https://www.movienewsletters.net/photos/275172RC.JPG"
+        },
+        {
+          "type": "Poster",
+          "url": "https://www.movienewsletters.net/photos/275172H1.jpg"
+        },
+        {
+          "type": "1",
+          "url": "https://image.tmdb.org/t/p/w185/9Vp8MKqrwRAtvACF7PBwbvdG4dq.jpg"
+        }
+      ]
+    },
+    {
+      "isScheduled": true,
+      "id": "121-285226",
+      "cinemaSourceId": 285226,
+      "title": "Knives Out",
+      "releaseDate": "2019-11-27T00:00:00",
+      "sortOrder": 2,
+      "releaseType": "NowPlaying",
+      "certification": "PG13",
+      "duration": "130",
+      "mediaItems": [
+        {
+          "type": "Still",
+          "url": "https://www.movienewsletters.net/photos/285226RD.JPG"
+        },
+        {
+          "type": "Trailer",
+          "url": "https://media.westworldmedia.com/mp4/285226_high.mp4"
+        },
+        {
+          "type": "Poster",
+          "url": "https://www.movienewsletters.net/photos/285226H1.jpg"
+        },
+        {
+          "type": "1",
+          "url": "https://image.tmdb.org/t/p/w185/t47INT1sSNiJwJHJqxxQ7Vt3DE9.jpg"
+        }
+      ]
+    },
+    {
+      "isScheduled": true,
+      "id": "121-280560",
+      "cinemaSourceId": 280560,
+      "title": "A Beautiful Day In The Neighborhood",
+      "releaseDate": "2019-11-22T00:00:00",
+      "sortOrder": 3,
+      "releaseType": "NowPlaying",
+      "certification": "PG",
+      "duration": "109",
+      "mediaItems": [
+        {
+          "type": "Still",
+          "url": "https://www.movienewsletters.net/photos/280560R6.JPG"
+        },
+        {
+          "type": "Trailer",
+          "url": "https://media.westworldmedia.com/mp4/280560_high.mp4"
+        },
+        {
+          "type": "Poster",
+          "url": "https://www.movienewsletters.net/photos/280560H1.jpg"
+        },
+        {
+          "type": "1",
+          "url": "https://image.tmdb.org/t/p/w185/tC3oqkvF6E1RzaTBMb7IivcLx96.jpg"
+        }
+      ]
+    },
+    {
+      "isScheduled": true,
+      "id": "121-240948",
+      "cinemaSourceId": 240948,
+      "title": "Frozen II",
+      "releaseDate": "2019-11-22T00:00:00",
+      "sortOrder": 4,
+      "releaseType": "NowPlaying",
+      "certification": "PG",
+      "duration": "104",
+      "mediaItems": [
+        {
+          "type": "Still",
+          "url": "https://www.movienewsletters.net/photos/240948RJ.JPG"
+        },
+        {
+          "type": "Trailer",
+          "url": "https://media.westworldmedia.com/mp4/240948_high.mp4"
+        },
+        {
+          "type": "Poster",
+          "url": "https://www.movienewsletters.net/photos/240948H1.jpg"
+        },
+        {
+          "type": "1",
+          "url": "https://image.tmdb.org/t/p/w185/qdfARIhgpgZOBh3vfNhWS4hmSo3.jpg"
+        }
+      ]
+    }
+  ]
+}

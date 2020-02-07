@@ -1,0 +1,17 @@
+{
+  "data": {
+    "movies": [],
+    "attributes": [],
+    "boxofficeId": null,
+    "id": null,
+    "name": null,
+    "location": null,
+    "image": null,
+    "email": null,
+    "phone": null,
+    "timezone": null,
+    "pricingUrl": null,
+    "description": null,
+    "tickets": []
+  }
+}

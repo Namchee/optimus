@@ -1,0 +1,1694 @@
+{
+  "data": {
+      "movies": [
+          {
+              "showdates": [
+                  {
+                      "date": "2019-12-19T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062303",
+                              "startDateTime": "2019-12-19T18:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33349?source=app"
+                          },
+                          {
+                              "id": "12062304",
+                              "startDateTime": "2019-12-19T18:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33350?source=app"
+                          },
+                          {
+                              "id": "12308107",
+                              "startDateTime": "2019-12-19T19:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33915?source=app"
+                          },
+                          {
+                              "id": "12308108",
+                              "startDateTime": "2019-12-19T21:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33914?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-20T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062305",
+                              "startDateTime": "2019-12-20T12:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33353?source=app"
+                          },
+                          {
+                              "id": "12062306",
+                              "startDateTime": "2019-12-20T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33352?source=app"
+                          },
+                          {
+                              "id": "12062307",
+                              "startDateTime": "2019-12-20T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33351?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-21T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062308",
+                              "startDateTime": "2019-12-21T09:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33360?source=app"
+                          },
+                          {
+                              "id": "12062309",
+                              "startDateTime": "2019-12-21T12:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33356?source=app"
+                          },
+                          {
+                              "id": "12062310",
+                              "startDateTime": "2019-12-21T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33355?source=app"
+                          },
+                          {
+                              "id": "12062311",
+                              "startDateTime": "2019-12-21T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33354?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-22T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062312",
+                              "startDateTime": "2019-12-22T09:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33361?source=app"
+                          },
+                          {
+                              "id": "12062313",
+                              "startDateTime": "2019-12-22T12:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33359?source=app"
+                          },
+                          {
+                              "id": "12062314",
+                              "startDateTime": "2019-12-22T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33358?source=app"
+                          },
+                          {
+                              "id": "12062315",
+                              "startDateTime": "2019-12-22T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33357?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-23T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062316",
+                              "startDateTime": "2019-12-23T12:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33364?source=app"
+                          },
+                          {
+                              "id": "12062317",
+                              "startDateTime": "2019-12-23T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33363?source=app"
+                          },
+                          {
+                              "id": "12062318",
+                              "startDateTime": "2019-12-23T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33362?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-24T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062319",
+                              "startDateTime": "2019-12-24T12:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33367?source=app"
+                          },
+                          {
+                              "id": "12062320",
+                              "startDateTime": "2019-12-24T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33366?source=app"
+                          },
+                          {
+                              "id": "12062321",
+                              "startDateTime": "2019-12-24T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33365?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-25T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12062322",
+                              "startDateTime": "2019-12-25T12:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33368?source=app"
+                          },
+                          {
+                              "id": "12062323",
+                              "startDateTime": "2019-12-25T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33370?source=app"
+                          },
+                          {
+                              "id": "12062324",
+                              "startDateTime": "2019-12-25T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33369?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-26T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12270456",
+                              "startDateTime": "2019-12-26T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/33866?source=app"
+                          }
+                      ]
+                  }
+              ],
+              "id": "121-249997",
+              "cinemaSourceId": 249997,
+              "title": "Star Wars: The Rise Of Skywalker",
+              "releaseDate": "2019-12-20T00:00:00",
+              "sortOrder": 0,
+              "releaseType": "ComingSoon",
+              "certification": "PG",
+              "duration": "155",
+              "mediaItems": [
+                  {
+                      "type": "Trailer",
+                      "url": "https://media.westworldmedia.com/mp4/249997_high.mp4"
+                  },
+                  {
+                      "type": "Still",
+                      "url": "https://www.movienewsletters.net/photos/249997RE.JPG"
+                  },
+                  {
+                      "type": "Poster",
+                      "url": "https://www.movienewsletters.net/photos/249997H1.jpg"
+                  },
+                  {
+                      "type": "1",
+                      "url": "https://image.tmdb.org/t/p/w185/gLsFK8LNAES8y3tWrLtPeLWdRHg.jpg"
+                  }
+              ]
+          },
+          {
+              "showdates": [
+                  {
+                      "date": "2019-12-17T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406136",
+                              "startDateTime": "2019-12-17T13:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34066?source=app"
+                          },
+                          {
+                              "id": "12406137",
+                              "startDateTime": "2019-12-17T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34065?source=app"
+                          },
+                          {
+                              "id": "12406138",
+                              "startDateTime": "2019-12-17T19:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34067?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-18T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406139",
+                              "startDateTime": "2019-12-18T13:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34087?source=app"
+                          },
+                          {
+                              "id": "12406140",
+                              "startDateTime": "2019-12-18T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34086?source=app"
+                          },
+                          {
+                              "id": "12406141",
+                              "startDateTime": "2019-12-18T19:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34088?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-19T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406142",
+                              "startDateTime": "2019-12-19T15:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34089?source=app"
+                          },
+                          {
+                              "id": "12406143",
+                              "startDateTime": "2019-12-19T19:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34093?source=app"
+                          }
+                      ]
+                  }
+              ],
+              "id": "121-275172",
+              "cinemaSourceId": 275172,
+              "title": "Jumanji: The Next Level",
+              "releaseDate": "2019-12-13T00:00:00",
+              "sortOrder": 1,
+              "releaseType": "NowPlaying",
+              "certification": "PG13",
+              "duration": "114",
+              "mediaItems": [
+                  {
+                      "type": "Trailer",
+                      "url": "https://media.westworldmedia.com/mp4/275172_high.mp4"
+                  },
+                  {
+                      "type": "Still",
+                      "url": "https://www.movienewsletters.net/photos/275172RC.JPG"
+                  },
+                  {
+                      "type": "Poster",
+                      "url": "https://www.movienewsletters.net/photos/275172H1.jpg"
+                  },
+                  {
+                      "type": "1",
+                      "url": "https://image.tmdb.org/t/p/w185/9Vp8MKqrwRAtvACF7PBwbvdG4dq.jpg"
+                  }
+              ]
+          },
+          {
+              "showdates": [
+                  {
+                      "date": "2019-12-17T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406126",
+                              "startDateTime": "2019-12-17T13:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34068?source=app"
+                          },
+                          {
+                              "id": "12406127",
+                              "startDateTime": "2019-12-17T16:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34070?source=app"
+                          },
+                          {
+                              "id": "12406128",
+                              "startDateTime": "2019-12-17T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34069?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-18T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406129",
+                              "startDateTime": "2019-12-18T13:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34083?source=app"
+                          },
+                          {
+                              "id": "12406130",
+                              "startDateTime": "2019-12-18T16:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34085?source=app"
+                          },
+                          {
+                              "id": "12406131",
+                              "startDateTime": "2019-12-18T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34084?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-19T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406132",
+                              "startDateTime": "2019-12-19T15:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34090?source=app"
+                          }
+                      ]
+                  }
+              ],
+              "id": "121-285226",
+              "cinemaSourceId": 285226,
+              "title": "Knives Out",
+              "releaseDate": "2019-11-27T00:00:00",
+              "sortOrder": 2,
+              "releaseType": "NowPlaying",
+              "certification": "PG13",
+              "duration": "130",
+              "mediaItems": [
+                  {
+                      "type": "Still",
+                      "url": "https://www.movienewsletters.net/photos/285226RD.JPG"
+                  },
+                  {
+                      "type": "Trailer",
+                      "url": "https://media.westworldmedia.com/mp4/285226_high.mp4"
+                  },
+                  {
+                      "type": "Poster",
+                      "url": "https://www.movienewsletters.net/photos/285226H1.jpg"
+                  },
+                  {
+                      "type": "1",
+                      "url": "https://image.tmdb.org/t/p/w185/t47INT1sSNiJwJHJqxxQ7Vt3DE9.jpg"
+                  }
+              ]
+          },
+          {
+              "showdates": [
+                  {
+                      "date": "2019-12-17T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406105",
+                              "startDateTime": "2019-12-17T13:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34074?source=app"
+                          },
+                          {
+                              "id": "12406106",
+                              "startDateTime": "2019-12-17T16:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34076?source=app"
+                          },
+                          {
+                              "id": "12406107",
+                              "startDateTime": "2019-12-17T19:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34075?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-18T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406108",
+                              "startDateTime": "2019-12-18T13:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34077?source=app"
+                          },
+                          {
+                              "id": "12406109",
+                              "startDateTime": "2019-12-18T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34079?source=app"
+                          },
+                          {
+                              "id": "12406110",
+                              "startDateTime": "2019-12-18T19:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34078?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-19T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406111",
+                              "startDateTime": "2019-12-19T16:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34092?source=app"
+                          }
+                      ]
+                  }
+              ],
+              "id": "121-280560",
+              "cinemaSourceId": 280560,
+              "title": "A Beautiful Day In The Neighborhood",
+              "releaseDate": "2019-11-22T00:00:00",
+              "sortOrder": 3,
+              "releaseType": "NowPlaying",
+              "certification": "PG",
+              "duration": "109",
+              "mediaItems": [
+                  {
+                      "type": "Still",
+                      "url": "https://www.movienewsletters.net/photos/280560R6.JPG"
+                  },
+                  {
+                      "type": "Trailer",
+                      "url": "https://media.westworldmedia.com/mp4/280560_high.mp4"
+                  },
+                  {
+                      "type": "Poster",
+                      "url": "https://www.movienewsletters.net/photos/280560H1.jpg"
+                  },
+                  {
+                      "type": "1",
+                      "url": "https://image.tmdb.org/t/p/w185/tC3oqkvF6E1RzaTBMb7IivcLx96.jpg"
+                  }
+              ]
+          },
+          {
+              "showdates": [
+                  {
+                      "date": "2019-12-17T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406085",
+                              "startDateTime": "2019-12-17T14:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34071?source=app"
+                          },
+                          {
+                              "id": "12406086",
+                              "startDateTime": "2019-12-17T16:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34073?source=app"
+                          },
+                          {
+                              "id": "12406087",
+                              "startDateTime": "2019-12-17T19:00:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34072?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-18T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406088",
+                              "startDateTime": "2019-12-18T13:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34080?source=app"
+                          },
+                          {
+                              "id": "12406089",
+                              "startDateTime": "2019-12-18T16:15:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34082?source=app"
+                          },
+                          {
+                              "id": "12406090",
+                              "startDateTime": "2019-12-18T18:45:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34081?source=app"
+                          }
+                      ]
+                  },
+                  {
+                      "date": "2019-12-19T00:00:00",
+                      "showtimes": [
+                          {
+                              "id": "12406091",
+                              "startDateTime": "2019-12-19T15:30:00-05:00",
+                              "isSoldOut": false,
+                              "isBookable": false,
+                              "attributes": [
+                                  {
+                                      "id": "1086",
+                                      "name": "Closed Captions",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  },
+                                  {
+                                      "id": "1087",
+                                      "name": "Audio Description",
+                                      "description": "",
+                                      "attributeType": 1,
+                                      "logo": null,
+                                      "priority": 0
+                                  }
+                              ],
+                              "redirectTicketingUrl": "https://prospector.wmpro.uk/StartTicketing/364e637a-6d1f-4fba-b525-a3380084d38c/34091?source=app"
+                          }
+                      ]
+                  }
+              ],
+              "id": "121-240948",
+              "cinemaSourceId": 240948,
+              "title": "Frozen II",
+              "releaseDate": "2019-11-22T00:00:00",
+              "sortOrder": 4,
+              "releaseType": "NowPlaying",
+              "certification": "PG",
+              "duration": "104",
+              "mediaItems": [
+                  {
+                      "type": "Still",
+                      "url": "https://www.movienewsletters.net/photos/240948RJ.JPG"
+                  },
+                  {
+                      "type": "Trailer",
+                      "url": "https://media.westworldmedia.com/mp4/240948_high.mp4"
+                  },
+                  {
+                      "type": "Poster",
+                      "url": "https://www.movienewsletters.net/photos/240948H1.jpg"
+                  },
+                  {
+                      "type": "1",
+                      "url": "https://image.tmdb.org/t/p/w185/qdfARIhgpgZOBh3vfNhWS4hmSo3.jpg"
+                  }
+              ]
+          }
+      ],
+      "attributes": [
+          {
+              "id": "1087",
+              "name": "Audio Description",
+              "description": null,
+              "attributeType": 0,
+              "logo": null,
+              "priority": 0
+          },
+          {
+              "id": "1086",
+              "name": "Closed Captions",
+              "description": null,
+              "attributeType": 0,
+              "logo": null,
+              "priority": 0
+          }
+      ],
+      "boxofficeId": "X0TMC",
+      "id": "7871",
+      "name": "Prospector Ridgefield",
+      "location": {
+          "address1": null,
+          "address2": null,
+          "city": null,
+          "state": null,
+          "zipCode": null,
+          "geolocation": {
+              "latitude": 0.0,
+              "longitude": 0.0
+          }
+      },
+      "image": "https://fr.web.img4.acsta.net/img/07/d9/07d938fbe8037c92882aa4111e81ece7.jpg",
+      "email": "info@prospectortheater.org",
+      "phone": "2034380136",
+      "timezone": null,
+      "pricingUrl": null,
+      "description": "The Prospector Theater is a 501(c)(3) non-profit dedicated to providing meaningful employment to adults with disabilities through the operation of a premium, first-run movie theater.",
+      "tickets": [
+          {
+              "name": "Adults",
+              "description": null,
+              "prices": [
+                  {
+                      "amount": 1300,
+                      "currency": "USD",
+                      "screens": []
+                  }
+              ],
+              "id": "1000000000"
+          },
+          {
+              "name": "Child",
+              "description": null,
+              "prices": [
+                  {
+                      "amount": 1100,
+                      "currency": "USD",
+                      "screens": []
+                  }
+              ],
+              "id": "1000000001"
+          },
+          {
+              "name": "Senior (65+)",
+              "description": "Mon - Thurs",
+              "prices": [
+                  {
+                      "amount": 1000,
+                      "currency": "USD",
+                      "screens": []
+                  }
+              ],
+              "id": "1000000002"
+          },
+          {
+              "name": "Senior (65+)",
+              "description": "All day Wednesday",
+              "prices": [
+                  {
+                      "amount": 600,
+                      "currency": "USD",
+                      "screens": []
+                  }
+              ],
+              "id": "1000000003"
+          }
+      ]
+  }
+}

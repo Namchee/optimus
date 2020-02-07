@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "boxofficeId": "X0TMC",
+      "id": "7869",
+      "name": "RTS Test",
+      "location": {
+        "address1": "25 Prospect Street",
+        "address2": null,
+        "city": "Ridgefield",
+        "state": "CT",
+        "zipCode": "06877",
+        "geolocation": {
+          "latitude": 41.2837855,
+          "longitude": -73.4973734
+        }
+      },
+      "image": "https://fr.web.img4.acsta.net/img/07/d9/07d938fbe8037c92882aa4111e81ece7.jpg"
+    },
+    {
+      "boxofficeId": "X0TMC",
+      "id": "7870",
+      "name": "RTS Vantiv",
+      "location": {
+        "address1": "25 Prospect Street",
+        "address2": null,
+        "city": "Ridgefield",
+        "state": "CT",
+        "zipCode": "06877",
+        "geolocation": {
+          "latitude": 41.2837855,
+          "longitude": -73.4973734
+        }
+      },
+      "image": "https://fr.web.img4.acsta.net/img/07/d9/07d938fbe8037c92882aa4111e81ece7.jpg"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# GeoLocation
+
+## Properties
+
+| Name               | Type        | Description                                                                                                                                                                                                                     | Notes                                 |
+| ------------------ | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| **latitude**       | **number**  | The latitude and latitude parameters represent the centre of the area. If these parameters are missing or null then no geo-filtering is applied.                                                                                | default value is null                 |
+| **longitude**      | **number**  | The latitude and latitude parameters represent the centre of the area. If these parameters are missing or null then no geo-filtering is applied.                                                                                | default value is null                 |
+| **radius**         | **number**  | search radius                                                                                                                                                                                                                   | default value is 60                   |
+| **unit**           | **string**  | the unit of radius                                                                                                                                                                                                              | kilometers or miles (default = miles) |
+| **keepIDs**        | **string**  | The keepIDs paramter is comma-separated list of item IDs that will be returned in the results irrespective of location e.g. a list 'favourited' items.                                                                          |
+| **minimumResults** | **integer** | The minimumResults parameter is the minimum number of locations that will be matched. If not enough locations are matched by the filter, the next-closest locations will be added until the minimum results have been achieved. |
+| **firstDate**      | **String**  |                                                                                                                                                                                                                                 |
+| **lastDate**       | **String**  |                                                                                                                                                                                                                                 |                                       |

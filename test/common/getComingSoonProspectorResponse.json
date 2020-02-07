@@ -1,0 +1,33 @@
+{
+  "data": [
+    {
+      "isScheduled": true,
+      "id": "121-249997",
+      "cinemaSourceId": 249997,
+      "title": "Star Wars: The Rise Of Skywalker",
+      "releaseDate": "2019-12-20T00:00:00",
+      "sortOrder": 0,
+      "releaseType": "ComingSoon",
+      "certification": "PG",
+      "duration": "155",
+      "mediaItems": [
+        {
+          "type": "Trailer",
+          "url": "https://media.westworldmedia.com/mp4/249997_high.mp4"
+        },
+        {
+          "type": "Still",
+          "url": "https://www.movienewsletters.net/photos/249997RE.JPG"
+        },
+        {
+          "type": "Poster",
+          "url": "https://www.movienewsletters.net/photos/249997H1.jpg"
+        },
+        {
+          "type": "1",
+          "url": "https://image.tmdb.org/t/p/w185/gLsFK8LNAES8y3tWrLtPeLWdRHg.jpg"
+        }
+      ]
+    }
+  ]
+}
