@@ -58,9 +58,9 @@ module.exports = (allConfig) => {
       return require('./src/CompatibilityApi').getCompatibility(allConfig, caller, osType, exhibitorCode)
     },
 
-    // -- Seating APIs --
-    getSeatingLayout: (id) => {
-
+    // -- Booking APIs --
+    createSession: (memberSessionId, bookingItemId) => {
+      return require('./src/BookingApi').createSession(allConfig, memberSessionId, bookingItemId)
     }
   }
 }

@@ -6,9 +6,10 @@ const request = require('superagent')
  * @param {String} reqType Type of the request GET
  * @param {String} path Complete path of the API URL
  * @param {Object} header Http header(includes Authorization header, Exhibitor-Code header etc.)
+ * @param {Object} body Http request body for any request which requires request body
  * @returns {Promise}
  */
-const reqToMobileMoviesAPI = async (reqType, path, header) => {
+const reqToMobileMoviesAPI = async (reqType, path, header, body) => {
   // Based on request type perform necessary action
   switch (reqType) {
     case 'GET':
@@ -16,6 +17,12 @@ const reqToMobileMoviesAPI = async (reqType, path, header) => {
         .get(path)
         .set(header)
         .set('Content-Type', 'application/json')
+        .send()
+    case 'POST':
+      return request
+        .post(path)
+        .set(header)
+        .send(body)
     default:
       throw new Error('Invalid request type')
   }
