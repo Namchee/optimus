@@ -31,6 +31,7 @@ Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL p
 9. GET /api/Orders/BookingSession/{bookingSessionId} -> /api/orders/booking_session/:id
 
 Catatan: Seluruh dokumentasi _endpoint_ __SUDAH ADA__ di `docs/swagger.json`
+Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 
 ## Header dan Token (memang public)
 
@@ -45,3 +46,4 @@ Catatan: Seluruh dokumentasi _endpoint_ __SUDAH ADA__ di `docs/swagger.json`
 2. JANGAN melawan _linter_, install plugin eslint pada Visual Studio Code anda.
 3. Gunakan `require()` untuk meng-_import_ modul, JANGAN gunakan `import`
 4. Dokumentasi harus ditulis dalam bahasa inggris
+5. Gunakan `async/await` untuk menangani `Promise`
