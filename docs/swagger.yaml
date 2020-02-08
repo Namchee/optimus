@@ -1,0 +1,2572 @@
+openapi: 3.0.1
+info:
+  title: Optimus Api Specification
+  description: "This API provides endpoints to support the Boxoffice Company mobile and voice apps.\\\r\n\\\r\n                                Documentation on any endpoint group or endpoint marked as UNDER DEVELOPMENT should not be considered as a contract.\\\r\n                                \\\r\n                                **Note about response objects:**\\\r\n                                Details in response objects may be from *Full* or *Light* (weight) object, with a *Light* object being a strict subset of the *Full* object. Where an endpoint returns detail from such a *Light* object this is noted.                                \r\n                                "
+  version: '1.0'
+paths:
+  /api/Booking/CreateSession:
+    post:
+      tags:
+        - Booking
+      summary: 'Creates a new booking session, optionally associated with a Member, for a specific item.'
+      description: "- Returns a 400 response if the Id of the item being booked is invalid.\r\n- Returns a 401 response if the Id of the item being booked is valid but the MemberSessionId is invalid."
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: 'Information about the item that the booking session is for, and which Member the session will be bound to.'
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingSessionRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingSessionRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingSessionRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CreateBookingSessionRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CreateBookingSessionResponseApiResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server Error
+  /api/Booking/CancelSession:
+    post:
+      tags:
+        - Booking
+      summary: Cancels a current booking session. Once cancelled the booking session cannot be retrieved.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Booking session identifier.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingSessionRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingSessionRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingSessionRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CancelBookingSessionRequest'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /api/Booking/ExtendSession:
+    post:
+      tags:
+        - Booking
+      summary: Extends a current booking session.
+      description: This operation is implicitly carried out by all other calls in the booking journey.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Booking session identifier.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/ExtendBookingSessionRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExtendBookingSessionRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/ExtendBookingSessionRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/ExtendBookingSessionRequest'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /api/Booking/Complete:
+    post:
+      tags:
+        - Booking
+      summary: Completes the booking session by creating a final Order.
+      parameters:
+        - name: returnOrderDetail
+          in: query
+          schema:
+            type: boolean
+            default: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Booking session identifier and payment detail.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/CompleteBookingRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CompleteBookingRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/CompleteBookingRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/CompleteBookingRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompleteBookingResponseApiResponse'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+        '500':
+          description: Server Error
+  /api/Compatibility:
+    get:
+      tags:
+        - Compatibility
+      summary: Returns the minimum client/consumer version supported by the API.
+      description: It is the consumer's responsibility to pass in the correct header values and take any action necessary based on the response.
+      parameters:
+        - name: OS-Type
+          in: header
+          description: Operating system type.
+          required: true
+        - name: Caller
+          in: header
+          description: Identifies the calling application.
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VersioningApiResponse'
+        '500':
+          description: Server Error
+  /api/Emergency:
+    get:
+      tags:
+        - Emergency
+      summary: Returns Emergency messages for an Exhibitor.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: latitude
+          in: query
+          description: Latitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: longitude
+          in: query
+          description: Longitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: radius
+          in: query
+          description: Radius for geolocation search (default is 60).
+        - name: unit
+          in: query
+          description: Unit for geolocation search (default is 'miles').
+        - name: keepIDs
+          in: query
+          description: IDs of entities to always keep in the geolocation results set.
+        - name: minimumResults
+          in: query
+          description: If the number of *in range* search results is less than this value then the next closest will be added in turn (default is 0).
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EmergencyMessageIEnumerableApiResponse'
+        '500':
+          description: Server Error
+  '/api/Events/Single/{eventId}':
+    get:
+      tags:
+        - Events
+      summary: Returns a single Event.
+      description: "Returns detail from *Light* Theater objects.\r\n\r\nFor Events with associated Movies, custom Movie objects consisting of only the Title and a Poster media item are returned."
+      parameters:
+        - name: eventId
+          in: path
+          description: The Event's Id
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: Locale-Code
+          in: header
+          description: Uses the specified locale to get localised content. Default is 'en-US'.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventApiResponse'
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /api/Events:
+    get:
+      tags:
+        - Events
+      summary: Returns a list of Events for an Exhibitor.
+      description: "Events are automatically filtered based on their *DisplayFrom* and *DisplayTo* date and time, which is assumed to be the date and time local to the Theater associated with the event.\r\n            \r\nFor Exhibitor-wide events, the *DisplayFrom* date and time is assumed to be the earliest and the *DisplayTo* date and time the latest, based on the timezones of the Theaters in the geolocation scope.\r\n            \r\nThis call returns details from *Light* Event objects. Please see response schema description."
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: Locale-Code
+          in: header
+          description: Uses the specified locale to get localised content. Default is 'en-US'.
+        - name: latitude
+          in: query
+          description: Latitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: longitude
+          in: query
+          description: Longitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: radius
+          in: query
+          description: Radius for geolocation search (default is 60).
+        - name: unit
+          in: query
+          description: Unit for geolocation search (default is 'miles').
+        - name: keepIDs
+          in: query
+          description: IDs of entities to always keep in the geolocation results set.
+        - name: minimumResults
+          in: query
+          description: If the number of *in range* search results is less than this value then the next closest will be added in turn (default is 0).
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventsListApiResponse'
+        '500':
+          description: Server Error
+  /api/Loyalty/Login:
+    post:
+      tags:
+        - Loyalty
+      summary: Sends credentials to log into the Loyalty system.
+      parameters:
+        - name: returnProfile
+          in: query
+          description: Return the Member's profile.
+          schema:
+            type: boolean
+            default: false
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Request object containing the Member's credentials.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoginResponseApiResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server Error
+  /api/Loyalty/RefreshSession:
+    post:
+      tags:
+        - Loyalty
+      summary: Refreshes the Member's logged-in state.
+      description: 'Returns a new _MemberSessionId_ if the Member''s session had ended, otherwise will return the existing _MemberSessionId_.'
+      parameters:
+        - name: returnProfile
+          in: query
+          description: Optionally return the Member profile (default 'false').
+          schema:
+            type: boolean
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Request object identifying the Member.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/RefreshMemberSessionRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RefreshMemberSessionRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/RefreshMemberSessionRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/RefreshMemberSessionRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RefreshMemberSessionResponseApiResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server Error
+  /api/Loyalty/Logout:
+    post:
+      tags:
+        - Loyalty
+      summary: Ends the Member's session and logs out of the Loyalty system.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Request object identifying the Member.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/LogoutRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LogoutRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/LogoutRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/LogoutRequest'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+        '500':
+          description: Server Error
+  /api/Loyalty/Profile:
+    post:
+      tags:
+        - Loyalty
+      summary: Retrieves a logged-in Member's profile.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Request object identifying the Member.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/MemberProfileRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MemberProfileRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/MemberProfileRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/MemberProfileRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MemberProfileResponseApiResponse'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '500':
+          description: Server Error
+  /api/Loyalty/PasswordReset:
+    post:
+      tags:
+        - Loyalty
+      summary: Invokes the password reset process.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Information to identify the Member to the Loyalty system
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/PasswordResetRequest'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: Bad Request
+        '500':
+          description: Server Error
+  /api/Movies/NowPlaying:
+    get:
+      tags:
+        - Movies
+      summary: Returns a list of "Now Playing" movies for an Exhibitor.
+      description: "A Movie is classified as *Now Playing* if it has a release date of earlier than today and has at least one schedule.\r\n\r\nThis call returns detail from *Light* Movie objects. Please see response schema description."
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: latitude
+          in: query
+          description: Latitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: longitude
+          in: query
+          description: Longitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: radius
+          in: query
+          description: Radius for geolocation search (default is 60).
+        - name: unit
+          in: query
+          description: Unit for geolocation search (default is 'miles').
+        - name: keepIDs
+          in: query
+          description: IDs of entities to always keep in the geolocation results set.
+        - name: minimumResults
+          in: query
+          description: If the number of *in range* search results is less than this value then the next closest will be added in turn (default is 0).
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MovieWithTheatersSummaryListApiResponse'
+        '500':
+          description: Server Error
+  /api/Movies/ComingSoon:
+    get:
+      tags:
+        - Movies
+      summary: Returns a list of "Coming Soon" movies for an Exhibitor.
+      description: "A Movie is classified as *Coming Soon* if it has a release date in the future, irrespective of whether the Movie is scheduled or not.\r\n\r\nThis call returns detail from *Light* Movie objects. Please see response schema description."
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: latitude
+          in: query
+          description: Latitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: longitude
+          in: query
+          description: Longitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: radius
+          in: query
+          description: Radius for geolocation search (default is 60).
+        - name: unit
+          in: query
+          description: Unit for geolocation search (default is 'miles').
+        - name: keepIDs
+          in: query
+          description: IDs of entities to always keep in the geolocation results set.
+        - name: minimumResults
+          in: query
+          description: If the number of *in range* search results is less than this value then the next closest will be added in turn (default is 0).
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MovieWithTheatersSummaryListApiResponse'
+        '500':
+          description: Server Error
+  '/api/Movies/Single/{movieId}':
+    get:
+      tags:
+        - Movies
+      summary: Returns Movie detail and schedule detail by Theater.
+      description: This call returns detail from *Light* Theater objects. Please see response schema description.
+      parameters:
+        - name: movieId
+          in: path
+          description: The Id of the Movie.
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: firstDate
+          in: query
+          description: This is first/earliest date that will appear in the response data.
+        - name: lastDate
+          in: query
+          description: This is the last/latest date that will appear in the response data.
+        - name: latitude
+          in: query
+          description: Latitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: longitude
+          in: query
+          description: Longitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: radius
+          in: query
+          description: Radius for geolocation search (default is 60).
+        - name: unit
+          in: query
+          description: Unit for geolocation search (default is 'miles').
+        - name: keepIDs
+          in: query
+          description: IDs of entities to always keep in the geolocation results set.
+        - name: minimumResults
+          in: query
+          description: If the number of *in range* search results is less than this value then the next closest will be added in turn (default is 0).
+        - name: groupby
+          in: query
+          description: Controls if and how showtimes are grouped.
+        - name: returnShowtimes
+          in: query
+          description: Controls if showtimes are returned in the response data (default is 'true').
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MovieWithTheatersApiResponse'
+        '500':
+          description: Server Error
+  '/api/Orders/Summary/{externalOrderId}':
+    get:
+      tags:
+        - Orders
+      summary: Returns a summary of a (completed) order.
+      parameters:
+        - name: externalOrderId
+          in: path
+          description: The Id of the (completed) order.
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderSummaryApiResponse'
+        '500':
+          description: Server Error
+  '/api/Orders/BookingSession/{bookingSessionId}':
+    get:
+      tags:
+        - Orders
+      summary: Gets Order details for an in-progress booking. UNDER DEVELOPMENT.
+      parameters:
+        - name: bookingSessionId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrderSummaryApiResponse'
+        '500':
+          description: Server Error
+  /api/Payment/Initialize:
+    post:
+      tags:
+        - Payment
+      summary: Initializes payment provider
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Request object identifying payment provider and setting values.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/InitializePaymentRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/InitializePaymentRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/InitializePaymentRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/InitializePaymentRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InitializePaymentResponseApiResponse'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  '/api/Seating/GetLayout/{bookingSessionId}':
+    get:
+      tags:
+        - Seating
+      summary: Returns the seating layout for the screening associated with the supplied bookingSessionId.
+      parameters:
+        - name: bookingSessionId
+          in: path
+          description: Booking session identifier.
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetSeatingLayoutResponseApiResponse'
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /api/Seating/SelectSeats:
+    post:
+      tags:
+        - Seating
+      summary: Sets the selected seats against the booking.
+      parameters:
+        - name: returnOrderDetail
+          in: query
+          description: Return a summary of the order so far.
+          schema:
+            type: boolean
+            default: false
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: Request object identifying the Booking Session and selected seats.
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/SelectSeatsRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SelectSeatsRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SelectSeatsRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SelectSeatsRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SelectSeatsResponseApiResponse'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+        '500':
+          description: Server Error
+  /api/Theaters:
+    get:
+      tags:
+        - Theaters
+      summary: Returns a list of Theaters for an Exhibitor.
+      description: This call returns *Light* Theater objects. Please see schema description.
+      parameters:
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: latitude
+          in: query
+          description: Latitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: longitude
+          in: query
+          description: Longitude for geolocation search (if *NULL* then no geolocation search is performed).
+        - name: radius
+          in: query
+          description: Radius for geolocation search (default is 60).
+        - name: unit
+          in: query
+          description: Unit for geolocation search (default is 'miles').
+        - name: keepIDs
+          in: query
+          description: IDs of entities to always keep in the geolocation results set.
+        - name: minimumResults
+          in: query
+          description: If the number of *in range* search results is less than this value then the next closest will be added in turn (default is 0).
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TheaterListApiResponse'
+        '500':
+          description: Server Error
+  '/api/Theaters/Single/{theaterId}':
+    get:
+      tags:
+        - Theaters
+      summary: Returns a single Theater with scheduling detail.
+      description: "This call returns detail from *Light* Movie objects. Please see response schema description.\r\n\r\nFor a *single-theater* Exhibitor the **{theaterId}** parameter may be omitted from the call."
+      parameters:
+        - name: theaterId
+          in: path
+          description: The Theater's Id.
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+        - name: firstDate
+          in: query
+          description: This is first/earliest date that will appear in the response data.
+        - name: lastDate
+          in: query
+          description: This is the last/latest date that will appear in the response data.
+        - name: groupby
+          in: query
+          description: Controls if and how showtimes are grouped.
+        - name: returnShowtimes
+          in: query
+          description: Controls if showtimes are returned in the response data (default is 'true').
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TheaterWithMoviesApiResponse'
+        '500':
+          description: Server Error
+  '/api/Ticketing/AvailableTickets/{bookingSessionId}':
+    get:
+      tags:
+        - Ticketing
+      summary: Gets the available tickets for associated with a Booking Session.
+      description: '- Returns a 404 response if the Booking Session Id does not exist.'
+      parameters:
+        - name: bookingSessionId
+          in: path
+          description: Booking session identifier.
+          required: true
+          schema:
+            type: string
+            nullable: true
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvailableTicketsResponseApiResponse'
+        '404':
+          description: Not Found
+        '500':
+          description: Server Error
+  /api/Ticketing/SelectTickets:
+    post:
+      tags:
+        - Ticketing
+      summary: Selects the tickets to associate with the booking session. Any previous tickets will be overwritten.
+      parameters:
+        - name: returnOrderDetail
+          in: query
+          description: Return a summary of the order so far.
+          schema:
+            type: boolean
+            default: false
+        - name: returnSeatingDetail
+          in: query
+          description: Return the seating detail (if reserved seating).
+          schema:
+            type: boolean
+            default: false
+        - name: Exhibitor-Code
+          in: header
+          description: Identifies the Exhibitor the request relates to.
+          required: true
+        - name: x-Authorization
+          in: header
+          description: Authorization header value for the Exhibitor's underlying data store.
+          required: true
+      requestBody:
+        description: ''
+        content:
+          application/json-patch+json:
+            schema:
+              $ref: '#/components/schemas/SelectTicketsRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SelectTicketsRequest'
+          text/json:
+            schema:
+              $ref: '#/components/schemas/SelectTicketsRequest'
+          application/*+json:
+            schema:
+              $ref: '#/components/schemas/SelectTicketsRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SelectTicketsResponseApiResponse'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '409':
+          description: Conflict
+        '500':
+          description: Server Error
+components:
+  schemas:
+    BookingItemTypeNullable:
+      enum:
+        - Showtime
+      type: string
+      nullable: true
+    BookingItem:
+      required:
+        - bookingItemType
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+        bookingItemType:
+          $ref: '#/components/schemas/BookingItemTypeNullable'
+      nullable: true
+    CreateBookingSessionRequest:
+      required:
+        - bookingItem
+      type: object
+      properties:
+        memberSessionId:
+          type: string
+          nullable: true
+        bookingItem:
+          $ref: '#/components/schemas/BookingItem'
+      nullable: true
+    CreateBookingSessionResponse:
+      type: object
+      properties:
+        bookingSessionId:
+          type: string
+          nullable: true
+      nullable: true
+    CreateBookingSessionResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/CreateBookingSessionResponse'
+      nullable: true
+    CancelBookingSessionRequest:
+      required:
+        - bookingSessionId
+      type: object
+      properties:
+        bookingSessionId:
+          type: string
+      nullable: true
+    ExtendBookingSessionRequest:
+      required:
+        - bookingSessionId
+      type: object
+      properties:
+        bookingSessionId:
+          type: string
+      nullable: true
+    CustomerDetails:
+      required:
+        - email
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        email:
+          type: string
+      nullable: true
+    CompleteBookingRequest:
+      required:
+        - bookingSessionId
+        - customerDetails
+        - paymentProviderValues
+      type: object
+      properties:
+        paymentProviderValues:
+          type: object
+          additionalProperties:
+            type: string
+            nullable: true
+        customerDetails:
+          $ref: '#/components/schemas/CustomerDetails'
+        bookingSessionId:
+          type: string
+      nullable: true
+    Movie:
+      type: object
+      properties:
+        title:
+          type: string
+          nullable: true
+        poster:
+          type: string
+          nullable: true
+        certification:
+          type: string
+          nullable: true
+      nullable: true
+    Performance:
+      type: object
+      properties:
+        exhibitor:
+          type: string
+          nullable: true
+        theater:
+          type: string
+          nullable: true
+        movie:
+          $ref: '#/components/schemas/Movie'
+        screen:
+          type: string
+          nullable: true
+        dateTime:
+          type: string
+          format: date-time
+      nullable: true
+    OrderTicket:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        quantity:
+          type: integer
+          format: int32
+      nullable: true
+    Seat:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+      nullable: true
+    Booking:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        reference:
+          type: string
+          nullable: true
+        performance:
+          $ref: '#/components/schemas/Performance'
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderTicket'
+          nullable: true
+        seats:
+          type: array
+          items:
+            $ref: '#/components/schemas/Seat'
+          nullable: true
+      nullable: true
+    ChargeType:
+      enum:
+        - Tickets
+        - BookingFee
+        - Donation
+      type: string
+    ChargeSummary:
+      type: object
+      properties:
+        type:
+          $ref: '#/components/schemas/ChargeType'
+        name:
+          type: string
+          nullable: true
+        quantity:
+          type: integer
+          format: int32
+        cost:
+          type: integer
+          format: int32
+        amount:
+          type: integer
+          format: int32
+      nullable: true
+    Charges:
+      type: object
+      properties:
+        currency:
+          type: string
+          nullable: true
+        total:
+          type: integer
+          format: int32
+        tax:
+          type: integer
+          format: int32
+        summary:
+          type: array
+          items:
+            $ref: '#/components/schemas/ChargeSummary'
+          nullable: true
+      nullable: true
+    Billing:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        email:
+          type: string
+          nullable: true
+        zipCode:
+          type: string
+          nullable: true
+      nullable: true
+    PaymentType:
+      enum:
+        - Card
+        - GiftCard
+      type: string
+    PaymentSummary:
+      type: object
+      properties:
+        type:
+          $ref: '#/components/schemas/PaymentType'
+        amount:
+          type: integer
+          format: int32
+      nullable: true
+    Payments:
+      type: object
+      properties:
+        billing:
+          $ref: '#/components/schemas/Billing'
+        currency:
+          type: string
+          nullable: true
+        total:
+          type: integer
+          format: int32
+        tax:
+          type: integer
+          format: int32
+        summary:
+          type: array
+          items:
+            $ref: '#/components/schemas/PaymentSummary'
+          nullable: true
+      nullable: true
+    OrderSummary:
+      type: object
+      properties:
+        booking:
+          $ref: '#/components/schemas/Booking'
+        charges:
+          $ref: '#/components/schemas/Charges'
+        payments:
+          $ref: '#/components/schemas/Payments'
+      nullable: true
+    CompleteBookingResponse:
+      type: object
+      properties:
+        orderId:
+          type: string
+          nullable: true
+        order:
+          $ref: '#/components/schemas/OrderSummary'
+        bookingSessionId:
+          type: string
+          nullable: true
+      nullable: true
+    CompleteBookingResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/CompleteBookingResponse'
+      nullable: true
+    Versioning:
+      type: object
+      properties:
+        minimum:
+          type: string
+          nullable: true
+      nullable: true
+    VersioningApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/Versioning'
+      nullable: true
+    EmergencyMessage:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+      nullable: true
+    EmergencyMessageIEnumerableApiResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/EmergencyMessage'
+          nullable: true
+      nullable: true
+    MediaItem:
+      type: object
+      properties:
+        type:
+          type: string
+          nullable: true
+          readOnly: true
+        url:
+          type: string
+          nullable: true
+          readOnly: true
+      nullable: true
+    TimePeriod:
+      type: object
+      properties:
+        first:
+          type: string
+          format: date-time
+        last:
+          type: string
+          format: date-time
+          nullable: true
+      nullable: true
+    EventAssociatedMovie:
+      type: object
+      properties:
+        title:
+          type: string
+          nullable: true
+        mediaItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+          nullable: true
+      nullable: true
+    IGeolocation:
+      type: object
+      properties:
+        latitude:
+          type: number
+          format: double
+          readOnly: true
+        longitude:
+          type: number
+          format: double
+          readOnly: true
+      nullable: true
+    Location:
+      type: object
+      properties:
+        address1:
+          type: string
+          nullable: true
+        address2:
+          type: string
+          nullable: true
+        city:
+          type: string
+          nullable: true
+        state:
+          type: string
+          nullable: true
+        zipCode:
+          type: string
+          nullable: true
+        geolocation:
+          $ref: '#/components/schemas/IGeolocation'
+      nullable: true
+    ScreenPriceRestriction:
+      type: object
+      nullable: true
+    Price:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: int32
+          readOnly: true
+        currency:
+          type: string
+          nullable: true
+          readOnly: true
+        screens:
+          type: array
+          items:
+            $ref: '#/components/schemas/ScreenPriceRestriction'
+          description: List of any screens that this pricing ONLY applies to i.e. applies to all if empty
+          nullable: true
+          readOnly: true
+      nullable: true
+    Ticket:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+          readOnly: true
+        description:
+          type: string
+          nullable: true
+          readOnly: true
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/Price'
+          nullable: true
+          readOnly: true
+        id:
+          type: string
+          nullable: true
+          readOnly: true
+      nullable: true
+    DistanceUnit:
+      enum:
+        - Miles
+        - Kilometers
+      type: string
+    GeoResultStatus:
+      enum:
+        - InRange
+        - OutOfRange
+        - Kept
+        - MakeWeight
+      type: string
+    GeoSearchResult:
+      type: object
+      properties:
+        distance:
+          type: number
+          format: double
+          readOnly: true
+        distanceUnit:
+          $ref: '#/components/schemas/DistanceUnit'
+        status:
+          $ref: '#/components/schemas/GeoResultStatus'
+      nullable: true
+    Theater:
+      type: object
+      properties:
+        boxofficeId:
+          type: string
+          nullable: true
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        location:
+          $ref: '#/components/schemas/Location'
+        image:
+          type: string
+          nullable: true
+        email:
+          type: string
+          description: Full object response only.
+          nullable: true
+        phone:
+          type: string
+          description: Full object response only.
+          nullable: true
+        timezone:
+          type: string
+          description: Full object response only.
+          nullable: true
+        pricingUrl:
+          type: string
+          description: Full object response only.
+          nullable: true
+        description:
+          type: string
+          description: Full object response only.
+          nullable: true
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
+          description: Full object response only.
+          nullable: true
+        geoSearchResult:
+          $ref: '#/components/schemas/GeoSearchResult'
+      nullable: true
+    Event:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        mediaItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        type:
+          type: string
+          nullable: true
+          readOnly: true
+        start:
+          type: string
+          format: date-time
+          nullable: true
+        end:
+          type: string
+          format: date-time
+          nullable: true
+        display:
+          $ref: '#/components/schemas/TimePeriod'
+        callToAction:
+          type: string
+          nullable: true
+        shortDescription:
+          type: string
+          description: Full object response only.
+          nullable: true
+        longDescription:
+          type: string
+          description: Full object response only.
+          nullable: true
+        bookingUrl:
+          type: string
+          description: Full object response only.
+          nullable: true
+        isSoldOut:
+          type: boolean
+        isBookable:
+          type: boolean
+        movies:
+          type: array
+          items:
+            $ref: '#/components/schemas/EventAssociatedMovie'
+          description: Full object response only.
+          nullable: true
+        location:
+          type: string
+          nullable: true
+          readOnly: true
+        theaters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Theater'
+          description: Full object response only.
+          nullable: true
+      nullable: true
+    EventApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/Event'
+      nullable: true
+    EventType:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+          readOnly: true
+        name:
+          type: string
+          nullable: true
+          readOnly: true
+        icon:
+          type: string
+          nullable: true
+          readOnly: true
+      nullable: true
+    EventsList:
+      type: object
+      properties:
+        types:
+          type: array
+          items:
+            $ref: '#/components/schemas/EventType'
+          nullable: true
+          readOnly: true
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/Event'
+          nullable: true
+          readOnly: true
+      nullable: true
+    EventsListApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/EventsList'
+      nullable: true
+    LoginRequest:
+      required:
+        - identifier
+        - password
+      type: object
+      properties:
+        identifier:
+          type: string
+          description: Member's identifier in the loyalty system e.g. email address
+        password:
+          type: string
+      nullable: true
+    MemberProfile:
+      type: object
+      properties:
+        firstName:
+          type: string
+          nullable: true
+        lastName:
+          type: string
+          nullable: true
+        fullName:
+          type: string
+          nullable: true
+          readOnly: true
+        email:
+          type: string
+          nullable: true
+      nullable: true
+    LoginResponse:
+      type: object
+      properties:
+        memberRefreshToken:
+          type: string
+          description: Token that can be used to create an new authenticated session for the Member
+          nullable: true
+        memberSessionId:
+          type: string
+          description: The session identifier/token that represents the logged-in Member
+          nullable: true
+        sessionExpiryUtc:
+          type: string
+          description: The UTC expiry date of the Member's session/token.
+          format: date-time
+        profile:
+          $ref: '#/components/schemas/MemberProfile'
+      nullable: true
+    LoginResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/LoginResponse'
+      nullable: true
+    RefreshMemberSessionRequest:
+      required:
+        - memberRefreshToken
+      type: object
+      properties:
+        memberRefreshToken:
+          type: string
+          description: Token that can be used to create an new authenticated session for the Member
+      nullable: true
+    RefreshMemberSessionResponse:
+      type: object
+      properties:
+        memberSessionId:
+          type: string
+          description: The session identifier/token that represents the logged-in Member
+          nullable: true
+        sessionExpiryUtc:
+          type: string
+          description: The UTC expiry date of the Member's session/token.
+          format: date-time
+        profile:
+          $ref: '#/components/schemas/MemberProfile'
+      nullable: true
+    RefreshMemberSessionResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/RefreshMemberSessionResponse'
+      nullable: true
+    LogoutRequest:
+      required:
+        - memberSessionId
+      type: object
+      properties:
+        cancelBookingSessions:
+          type: boolean
+          description: Cancel any existing booking sessions associated with the Member
+        memberSessionId:
+          type: string
+          description: The session identifier/token that represents the logged-in Member
+      nullable: true
+    MemberProfileRequest:
+      required:
+        - memberSessionId
+      type: object
+      properties:
+        memberSessionId:
+          type: string
+          description: The session identifier/token that represents the logged-in Member
+      nullable: true
+    MemberProfileResponse:
+      type: object
+      properties:
+        memberSessionId:
+          type: string
+          description: The session identifier/token that represents the logged-in Member
+          nullable: true
+        sessionExpiryUtc:
+          type: string
+          description: The UTC expiry date of the Member's session/token.
+          format: date-time
+        profile:
+          $ref: '#/components/schemas/MemberProfile'
+      nullable: true
+    MemberProfileResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/MemberProfileResponse'
+      nullable: true
+    PasswordResetRequest:
+      required:
+        - email
+      type: object
+      properties:
+        email:
+          type: string
+      nullable: true
+    MovieReleaseType:
+      enum:
+        - Undefined
+        - NowPlaying
+        - ComingSoon
+      type: string
+    Photo:
+      type: object
+      properties:
+        imageUrl:
+          type: string
+          nullable: true
+          readOnly: true
+        id:
+          type: string
+          nullable: true
+          readOnly: true
+      nullable: true
+    Person:
+      type: object
+      properties:
+        imageUrl:
+          type: string
+          nullable: true
+          readOnly: true
+        name:
+          type: string
+          nullable: true
+          readOnly: true
+        id:
+          type: string
+          nullable: true
+          readOnly: true
+      nullable: true
+    Review:
+      type: object
+      properties:
+        userRating:
+          type: number
+          format: double
+        pressRating:
+          type: number
+          format: double
+      nullable: true
+    MovieWithTheatersSummary:
+      type: object
+      properties:
+        isScheduled:
+          type: boolean
+        id:
+          type: string
+          nullable: true
+        cinemaSourceId:
+          type: integer
+          format: int32
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        releaseDate:
+          type: string
+          format: date-time
+        sortOrder:
+          type: integer
+          description: Sort rank of the Movie within the list of all Movies
+          format: int32
+        releaseType:
+          $ref: '#/components/schemas/MovieReleaseType'
+        photoGallery:
+          type: array
+          items:
+            $ref: '#/components/schemas/Photo'
+          description: Full object response only.
+          nullable: true
+        certification:
+          type: string
+          nullable: true
+        duration:
+          type: string
+          nullable: true
+        longSynopsis:
+          type: string
+          description: Full object response only.
+          nullable: true
+        shortSynopsis:
+          type: string
+          description: Full object response only.
+          nullable: true
+        trailer:
+          type: string
+          description: Full object response only.
+          nullable: true
+        cast:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+          description: Full object response only.
+          nullable: true
+        director:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+          description: Full object response only.
+          nullable: true
+        mediaItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+          nullable: true
+        review:
+          $ref: '#/components/schemas/Review'
+      nullable: true
+    MovieWithTheatersSummaryListApiResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/MovieWithTheatersSummary'
+          nullable: true
+      nullable: true
+    Attribute:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        attributeType:
+          type: integer
+          format: int32
+        logo:
+          type: string
+          nullable: true
+        priority:
+          type: integer
+          format: int32
+      nullable: true
+    Showtime:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        startDateTime:
+          type: string
+          format: date-time
+        isSoldOut:
+          type: boolean
+        isBookable:
+          type: boolean
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+          nullable: true
+        redirectTicketingUrl:
+          type: string
+          nullable: true
+      nullable: true
+    ShowtimesGroupingType:
+      enum:
+        - None
+        - ByAttributesCombination
+        - SingleGrouping
+        - HideShowtimes
+      type: string
+    ShowtimeGrouping:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        type:
+          $ref: '#/components/schemas/ShowtimesGroupingType'
+        priority:
+          type: integer
+          format: int32
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+          nullable: true
+        showtimes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Showtime'
+          nullable: true
+      nullable: true
+    Showdate:
+      type: object
+      properties:
+        date:
+          type: string
+          format: date-time
+        showtimes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Showtime'
+          description: Only included in the response when no showtime grouping has been specified
+          nullable: true
+        groupings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShowtimeGrouping'
+          nullable: true
+      nullable: true
+    TheaterWithShowdates:
+      type: object
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+          description: Full object response only.
+          nullable: true
+        showdates:
+          type: array
+          items:
+            $ref: '#/components/schemas/Showdate'
+          nullable: true
+        boxofficeId:
+          type: string
+          nullable: true
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        location:
+          $ref: '#/components/schemas/Location'
+        image:
+          type: string
+          nullable: true
+        email:
+          type: string
+          description: Full object response only.
+          nullable: true
+        phone:
+          type: string
+          description: Full object response only.
+          nullable: true
+        timezone:
+          type: string
+          description: Full object response only.
+          nullable: true
+        pricingUrl:
+          type: string
+          description: Full object response only.
+          nullable: true
+        description:
+          type: string
+          description: Full object response only.
+          nullable: true
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
+          description: Full object response only.
+          nullable: true
+        geoSearchResult:
+          $ref: '#/components/schemas/GeoSearchResult'
+      nullable: true
+    MovieWithTheaters:
+      type: object
+      properties:
+        theaters:
+          type: array
+          items:
+            $ref: '#/components/schemas/TheaterWithShowdates'
+          nullable: true
+        id:
+          type: string
+          nullable: true
+        cinemaSourceId:
+          type: integer
+          format: int32
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        releaseDate:
+          type: string
+          format: date-time
+        sortOrder:
+          type: integer
+          description: Sort rank of the Movie within the list of all Movies
+          format: int32
+        releaseType:
+          $ref: '#/components/schemas/MovieReleaseType'
+        photoGallery:
+          type: array
+          items:
+            $ref: '#/components/schemas/Photo'
+          description: Full object response only.
+          nullable: true
+        certification:
+          type: string
+          nullable: true
+        duration:
+          type: string
+          nullable: true
+        longSynopsis:
+          type: string
+          description: Full object response only.
+          nullable: true
+        shortSynopsis:
+          type: string
+          description: Full object response only.
+          nullable: true
+        trailer:
+          type: string
+          description: Full object response only.
+          nullable: true
+        cast:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+          description: Full object response only.
+          nullable: true
+        director:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+          description: Full object response only.
+          nullable: true
+        mediaItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+          nullable: true
+        review:
+          $ref: '#/components/schemas/Review'
+      nullable: true
+    MovieWithTheatersApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/MovieWithTheaters'
+      nullable: true
+    OrderSummaryApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/OrderSummary'
+      nullable: true
+    InitializePaymentRequest:
+      required:
+        - bookingSessionId
+        - provider
+        - providerValues
+      type: object
+      properties:
+        provider:
+          type: string
+        providerValues:
+          type: object
+          additionalProperties:
+            type: string
+            nullable: true
+        bookingSessionId:
+          type: string
+      nullable: true
+    InitializePaymentResponse:
+      required:
+        - bookingSessionId
+      type: object
+      properties:
+        provider:
+          type: string
+          nullable: true
+        providerValues:
+          type: object
+          additionalProperties:
+            type: string
+            nullable: true
+          nullable: true
+        bookingSessionId:
+          type: string
+      nullable: true
+    InitializePaymentResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/InitializePaymentResponse'
+      nullable: true
+    SeatingArea:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+      nullable: true
+    RequiredSeatingAllocation:
+      type: object
+      properties:
+        areaId:
+          type: string
+          nullable: true
+        seatCount:
+          type: integer
+          format: int32
+      nullable: true
+    ScreenPosition:
+      enum:
+        - Top
+        - Bottom
+        - Left
+        - Right
+      type: string
+    SeatMapElementType:
+      enum:
+        - Padding
+        - Container
+      type: string
+    ISeatMapElement:
+      type: object
+      properties:
+        type:
+          $ref: '#/components/schemas/SeatMapElementType'
+      nullable: true
+    SeatMapRow:
+      type: object
+      properties:
+        name:
+          type: string
+          nullable: true
+        elements:
+          type: array
+          items:
+            $ref: '#/components/schemas/ISeatMapElement'
+          nullable: true
+      nullable: true
+    SeatMap:
+      type: object
+      properties:
+        screenPosition:
+          $ref: '#/components/schemas/ScreenPosition'
+        rows:
+          type: array
+          items:
+            $ref: '#/components/schemas/SeatMapRow'
+          nullable: true
+      nullable: true
+    SeatingElementRelation:
+      enum:
+        - SeatGroup
+      type: string
+    RelatedElement:
+      type: object
+      properties:
+        ids:
+          type: array
+          items:
+            type: string
+            nullable: true
+          nullable: true
+        relation:
+          $ref: '#/components/schemas/SeatingElementRelation'
+      nullable: true
+    GetSeatingLayoutResponse:
+      type: object
+      properties:
+        areas:
+          type: array
+          items:
+            $ref: '#/components/schemas/SeatingArea'
+          nullable: true
+        requiredAllocation:
+          type: array
+          items:
+            $ref: '#/components/schemas/RequiredSeatingAllocation'
+          nullable: true
+        allocatedSeatSummary:
+          type: array
+          items:
+            $ref: '#/components/schemas/Seat'
+          nullable: true
+        layout:
+          $ref: '#/components/schemas/SeatMap'
+        relatedElements:
+          type: array
+          items:
+            $ref: '#/components/schemas/RelatedElement'
+          nullable: true
+        bookingSessionId:
+          type: string
+          nullable: true
+      nullable: true
+    GetSeatingLayoutResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/GetSeatingLayoutResponse'
+      nullable: true
+    SelectedSeat:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+      nullable: true
+    SelectSeatsRequest:
+      required:
+        - bookingSessionId
+        - selectedSeats
+      type: object
+      properties:
+        selectedSeats:
+          type: array
+          items:
+            $ref: '#/components/schemas/SelectedSeat'
+        bookingSessionId:
+          type: string
+      nullable: true
+    SelectSeatsResponse:
+      type: object
+      properties:
+        allocatedSeats:
+          type: array
+          items:
+            $ref: '#/components/schemas/Seat'
+          nullable: true
+        order:
+          $ref: '#/components/schemas/OrderSummary'
+        bookingSessionId:
+          type: string
+          nullable: true
+      nullable: true
+    SelectSeatsResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/SelectSeatsResponse'
+      nullable: true
+    TheaterListApiResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/Theater'
+          nullable: true
+      nullable: true
+    MovieWithShowdates:
+      type: object
+      properties:
+        showdates:
+          type: array
+          items:
+            $ref: '#/components/schemas/Showdate'
+          nullable: true
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+          description: Full object response only.
+          nullable: true
+        id:
+          type: string
+          nullable: true
+        cinemaSourceId:
+          type: integer
+          format: int32
+          nullable: true
+        title:
+          type: string
+          nullable: true
+        releaseDate:
+          type: string
+          format: date-time
+        sortOrder:
+          type: integer
+          description: Sort rank of the Movie within the list of all Movies
+          format: int32
+        releaseType:
+          $ref: '#/components/schemas/MovieReleaseType'
+        photoGallery:
+          type: array
+          items:
+            $ref: '#/components/schemas/Photo'
+          description: Full object response only.
+          nullable: true
+        certification:
+          type: string
+          nullable: true
+        duration:
+          type: string
+          nullable: true
+        longSynopsis:
+          type: string
+          description: Full object response only.
+          nullable: true
+        shortSynopsis:
+          type: string
+          description: Full object response only.
+          nullable: true
+        trailer:
+          type: string
+          description: Full object response only.
+          nullable: true
+        cast:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+          description: Full object response only.
+          nullable: true
+        director:
+          type: array
+          items:
+            $ref: '#/components/schemas/Person'
+          description: Full object response only.
+          nullable: true
+        mediaItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaItem'
+          nullable: true
+        review:
+          $ref: '#/components/schemas/Review'
+      nullable: true
+    TheaterWithMovies:
+      type: object
+      properties:
+        movies:
+          type: array
+          items:
+            $ref: '#/components/schemas/MovieWithShowdates'
+          nullable: true
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+          nullable: true
+        boxofficeId:
+          type: string
+          nullable: true
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        location:
+          $ref: '#/components/schemas/Location'
+        image:
+          type: string
+          nullable: true
+        email:
+          type: string
+          description: Full object response only.
+          nullable: true
+        phone:
+          type: string
+          description: Full object response only.
+          nullable: true
+        timezone:
+          type: string
+          description: Full object response only.
+          nullable: true
+        pricingUrl:
+          type: string
+          description: Full object response only.
+          nullable: true
+        description:
+          type: string
+          description: Full object response only.
+          nullable: true
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/Ticket'
+          description: Full object response only.
+          nullable: true
+        geoSearchResult:
+          $ref: '#/components/schemas/GeoSearchResult'
+      nullable: true
+    TheaterWithMoviesApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/TheaterWithMovies'
+      nullable: true
+    TicketTypeDirectives:
+      type: object
+      properties:
+        maximumSelectable:
+          type: integer
+          format: int32
+        isMemberOnly:
+          type: boolean
+        displayOrder:
+          type: integer
+          format: int32
+      nullable: true
+    TicketType:
+      type: object
+      properties:
+        id:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        description:
+          type: string
+          nullable: true
+        price:
+          type: integer
+          format: int32
+        tax:
+          type: integer
+          format: int32
+        directives:
+          $ref: '#/components/schemas/TicketTypeDirectives'
+      nullable: true
+    AvailableTicketsResponse:
+      type: object
+      properties:
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/TicketType'
+          nullable: true
+        bookingSessionId:
+          type: string
+          nullable: true
+      nullable: true
+    AvailableTicketsResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/AvailableTicketsResponse'
+      nullable: true
+    RequestedTicket:
+      required:
+        - id
+      type: object
+      properties:
+        id:
+          type: string
+        count:
+          maximum: 2147483647
+          minimum: 1
+          type: integer
+          format: int32
+      nullable: true
+    SelectTicketsRequest:
+      required:
+        - bookingSessionId
+        - tickets
+      type: object
+      properties:
+        tickets:
+          type: array
+          items:
+            $ref: '#/components/schemas/RequestedTicket'
+        bookingSessionId:
+          type: string
+      nullable: true
+    SelectTicketsResponse:
+      type: object
+      properties:
+        secondsToExpiry:
+          type: integer
+          format: int32
+        isAllocatedSeating:
+          type: boolean
+        allocatedSeatSummary:
+          type: array
+          items:
+            type: string
+            nullable: true
+          nullable: true
+        order:
+          $ref: '#/components/schemas/OrderSummary'
+        seating:
+          $ref: '#/components/schemas/SeatMap'
+        bookingSessionId:
+          type: string
+          nullable: true
+      nullable: true
+    SelectTicketsResponseApiResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/SelectTicketsResponse'
+      nullable: true
+tags:
+  - name: Loyalty
+    description: UNDER DEVELOPMENT
+  - name: Booking
+    description: UNDER DEVELOPMENT
+  - name: Payment
+    description: UNDER DEVELOPMENT
+  - name: Seating
+    description: UNDER DEVELOPMENT
+  - name: Ticketing
+    description: UNDER DEVELOPMENT
