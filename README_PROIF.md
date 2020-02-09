@@ -78,3 +78,4 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 5. Gunakan `async/await` untuk menangani `Promise`
 6. Gunakan PascalCase untuk nama _file_ dan camelCase untuk hal lainnya
 7. Apabila ada pertanyaan, buatlah _issue_ baru di GitHub
+8. Setelah _feature_ selesai diimplementasi, buatlah _branch_ baru dan lakukan _pull request_ ke branch `master`
