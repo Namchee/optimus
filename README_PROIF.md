@@ -77,3 +77,4 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 4. Dokumentasi harus ditulis dalam bahasa inggris
 5. Gunakan `async/await` untuk menangani `Promise`
 6. Gunakan PascalCase untuk nama _file_ dan camelCase untuk hal lainnya
+7. Apabila ada pertanyaan, buatlah _issue_ baru di GitHub
