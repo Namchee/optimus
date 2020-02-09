@@ -17,7 +17,6 @@ const reqToMobileMoviesAPI = async (reqType, path, header, body) => {
         .get(path)
         .set(header)
         .set('Content-Type', 'application/json')
-        .send()
     case 'POST':
       return request
         .post(path)

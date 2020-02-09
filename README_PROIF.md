@@ -2,17 +2,18 @@
 
 ## Persiapan
 
-1. Install Dependency (`npm install`)
-2. Letakkan _file_ `.env` yang sudah diberikan di _root_ folder
-3. Jalankan `npm run dev` untuk memulai _development server_ (baca _log_ untuk mengetahui server listen di port berapa)
-4. Test _endpoint_ bagian anda menggunakan HTTP client seperti Postman, Insomnia, atau cURL
-5. Happy ~~coding~~ developing~
+1. Pull _repository_ ini (ya iyalah!)
+2. Install Dependency (`npm install`)
+3. Letakkan _file_ `.env` yang sudah diberikan di _root_ folder
+4. Jalankan `npm run dev` untuk memulai _development server_ (baca _log_ untuk mengetahui server listen di port berapa)
+5. Test _endpoint_ bagian anda menggunakan HTTP client seperti Postman, Insomnia, atau cURL
+6. Happy ~~coding~~ developing~
 
 ## Daftar _Endpoint_ yang Harus Dikerjakan
 
-Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL pada aplikasi untuk testing
+Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL pada aplikasi untuk testing, beserta _asignee_ masing-masing
 
-1. POST /api/Booking/CreateSession -> /api/booking/create_session
+1. POST /api/Booking/CreateSession -> /api/booking/create_session -> Cristopher
 
 2. POST /api/Booking/CancelSession -> /api/booking/cancel_session
 
@@ -47,3 +48,4 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 3. Gunakan `require()` untuk meng-_import_ modul, JANGAN gunakan `import`
 4. Dokumentasi harus ditulis dalam bahasa inggris
 5. Gunakan `async/await` untuk menangani `Promise`
+6. Penuhi _minor requirements_

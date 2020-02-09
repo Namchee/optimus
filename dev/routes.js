@@ -1,6 +1,7 @@
 const dotenv = require('dotenv')
 const express = require('express')
 const optimus = require('./../index')
+const mobileMoviesLogger = require('../src/Logger')
 
 dotenv.config()
 
@@ -11,7 +12,26 @@ const wrapper = optimus({
   exhibitorCode: process.env.EXHIBITOR_CODE
 })
 
-router.post('/api/booking/create_session', (req, res, next) => res.json('hai'))
+router.post('/api/booking/create_session', async (req, res, next) => {
+  const memberSessionId = req.body.memberSessionId
+  const bookingItemId = req.body.bookingItemId
+
+  try {
+    const response = await wrapper.createSession(memberSessionId, bookingItemId)
+
+    return res.status(200).json({
+      data: response.body.data.bookingSessionId,
+      error: null
+    })
+  } catch (err) {
+    mobileMoviesLogger.error(err.status)
+
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+})
 router.post('/api/booking/cancel_session', (req, res, next) => res.json('hai'))
 router.get('/api/ticketing/available_tickets/:id', (req, res, next) => res.json('hai'))
 router.post('/api/ticketing/select_tickets', (req, res, next) => res.json('hai'))

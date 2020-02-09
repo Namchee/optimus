@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const helper = require('./common/helper')
+const mobileMoviesLogger = require('./Logger')
 
 /**
  * Function to create booking session
@@ -7,8 +8,17 @@ const helper = require('./common/helper')
  * @param {String} memberSessionId Member ID
  * @param {String} bookingItemId Item ID
  * @param {String} exhibitorCode Exhibitor's code
+ * @return {Promise}
  */
 const createSession = (allConfig, memberSessionId, bookingItemId, exhibitorCode) => {
+  mobileMoviesLogger.info({
+    category: 'Booking',
+    functionName: 'CreateSession',
+    params: {
+      memberSessionId,
+      bookingItemId
+    }
+  })
   const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Booking/CreateSession`
 
   if (_.isNil(exhibitorCode)) {
