@@ -30,7 +30,7 @@ const getBookingSession = async (allConfig, bookingSessionId, exhibitorCode) => 
   mobileMoviesLogger.info({
     category: 'Orders',
     functionName: 'getBookingSession',
-    param:{
+    param: {
       bookingSessionId
     }
   })
