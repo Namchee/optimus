@@ -13,11 +13,11 @@
 
 Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL pada aplikasi untuk testing, beserta _asignee_ masing-masing
 
-1. POST /api/Booking/CreateSession -> /api/booking/create_session -> Cristopher
+1. ~~POST /api/Booking/CreateSession -> /api/booking/create_session~~ -> Cristopher (done)
 
 2. POST /api/Booking/CancelSession -> /api/booking/cancel_session
 
-3. GET /api/ticketing/availableTickets/{BookingSessionId} -> /api/ticketing/available_tickets/:id
+3. ~~GET /api/ticketing/availableTickets/{BookingSessionId} -> /api/ticketing/available_tickets/:id~~ -> Cristopher (done)
 
 4. POST /api/ticketing/selectTickets -> /api/ticketing/select_tickets
 
