@@ -1,7 +1,6 @@
 const dotenv = require('dotenv')
 const express = require('express')
 const optimus = require('./../index')
-const mobileMoviesLogger = require('../src/Logger')
 
 dotenv.config()
 
@@ -19,21 +18,37 @@ router.post('/api/booking/create_session', async (req, res, next) => {
   try {
     const response = await wrapper.createSession(memberSessionId, bookingItemId)
 
-    return res.status(200).json({
+    return res.status(response.status).json({
       data: response.body.data.bookingSessionId,
       error: null
     })
   } catch (err) {
-    mobileMoviesLogger.error(err.status)
-
     return res.status(err.status).json({
       data: null,
       error: err
     })
   }
 })
+
 router.post('/api/booking/cancel_session', (req, res, next) => res.json('hai'))
-router.get('/api/ticketing/available_tickets/:id', (req, res, next) => res.json('hai'))
+router.get('/api/ticketing/available_tickets/:id', async (req, res, next) => {
+  const bookingSessionId = req.query.id
+
+  try {
+    const response = await wrapper.getAvailableTickets(bookingSessionId)
+
+    return res.status(response.status).json({
+      data: response.body.data.tickets,
+      error: null
+    })
+  } catch (err) {
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+})
+
 router.post('/api/ticketing/select_tickets', (req, res, next) => res.json('hai'))
 router.get('/api/seating/get_layout/:id', (req, res, next) => res.json('hai'))
 router.post('/api/seating/select_seats', (req, res, next) => res.json('hai'))

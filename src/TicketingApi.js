@@ -3,24 +3,22 @@ const helper = require('./common/helper')
 const mobileMoviesLogger = require('./Logger')
 
 /**
- * Function to create booking session
+ * Function to get all available tickets associated with a Booking Session.
  * @param {Object} allConfig Configuration object
- * @param {String} memberSessionId Member ID
- * @param {String} bookingItemId Item ID
+ * @param {String} bookingSessionId Booking session's ID
  * @param {String} exhibitorCode Exhibitor's code
  * @return {Promise}
  */
-const createSession = async (allConfig, memberSessionId, bookingItemId, exhibitorCode) => {
+const getAvailableTickets = async (allConfig, bookingSessionId, exhibitorCode) => {
   mobileMoviesLogger.info({
-    category: 'Booking',
-    functionName: 'CreateSession',
+    category: 'Ticketing',
+    functionName: 'AvailableTickets',
     params: {
-      memberSessionId,
-      bookingItemId
+      bookingSessionId
     }
   })
 
-  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Booking/CreateSession`
+  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Ticketing/AvailableTickets/${bookingSessionId}`
 
   if (_.isNil(exhibitorCode)) {
     exhibitorCode = allConfig.exhibitorCode
@@ -31,16 +29,8 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
     'X-Authorization': allConfig.authToken
   }
 
-  const body = {
-    memberSessionId,
-    bookingItem: {
-      id: bookingItemId,
-      bookingItemType: 'Showtime'
-    }
-  }
-
   try {
-    const response = await helper.reqToMobileMoviesAPI('POST', url, header, body)
+    const response = await helper.reqToMobileMoviesAPI('GET', url, header)
 
     mobileMoviesLogger.info(response.status)
 
@@ -53,5 +43,5 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
 }
 
 module.exports = {
-  createSession
+  getAvailableTickets
 }
