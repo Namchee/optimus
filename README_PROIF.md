@@ -41,6 +41,29 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 | Exhibitor-Code  | Prospector                   | RTSDemo                      | CinemaWest                   | BandBTheaters                    | ShowcaseUS                       |
 | X-Authorization | vSD45gbEgd5ggevbxjhg4655bvE= | RGV2Q2xpZW50MTpwYSQkdzByZA== | RGV2Q2xpZW50MTpwYSQkdzByZA== | YmJ0aGVhdGVyczpjaW5lbWFzdHVmZg== | c2hvd2Nhc2V1czpjaW5lbWFzdHVmZg== |
 
+## _Minor requirements_
+
+1. Mengeluarkan _debug_ statement (menggunakan `bunyan`) dengan ketentuan sebagai berikut:
+  - Ketika sebuah fungsi dipanggil, keluarkan _debug_ statement dengan format berikut:
+  ```js
+  {
+    'category': '...' // Kategori pada API
+    'functionName': '...' // Nama fungsi
+    'params': { ... } // Daftar parameter non-header
+  }
+  ```
+  - Ketika API terpanggil, keluarkan _debug_ statement yang berisi _status code_ dari respons API tidak peduli apakah permintaan berhasil atau gagal
+2. Untuk keperluan _development_, kirimkan respons dengan format sebagai berikut:
+  ```js
+  {
+    'data': { ... } // Hasil data dari API, bila respons sukses
+    'error': '...' // Error bila gagal
+  }
+  ```
+
+  Catatan: Isi _field_ lain yang tidak diisi dengan `null`. Contoh: Apabila permintaan berhasil
+  isi `data` dengan kembalian dari API dan `error` dengan `null`
+
 ## Catatan Lain
 
 1. Gunakan [convential commit](https://www.conventionalcommits.org/en/v1.0.0/)
@@ -48,4 +71,4 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 3. Gunakan `require()` untuk meng-_import_ modul, JANGAN gunakan `import`
 4. Dokumentasi harus ditulis dalam bahasa inggris
 5. Gunakan `async/await` untuk menangani `Promise`
-6. Penuhi _minor requirements_
+6. Gunakan PascalCase untuk nama _file_ dan camelCase untuk hal lainnya
