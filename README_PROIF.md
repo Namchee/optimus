@@ -44,7 +44,9 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
 ## _Minor requirements_
 
 1. Mengeluarkan _debug_ statement (menggunakan `bunyan`) dengan ketentuan sebagai berikut:
-  - Ketika sebuah fungsi dipanggil, keluarkan _debug_ statement dengan format berikut:
+  
+- Ketika sebuah fungsi dipanggil, keluarkan _debug_ statement dengan format berikut:
+
   ```js
   {
     'category': '...' // Kategori pada API
@@ -52,8 +54,11 @@ Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
     'params': { ... } // Daftar parameter non-header
   }
   ```
-  - Ketika API terpanggil, keluarkan _debug_ statement yang berisi _status code_ dari respons API tidak peduli apakah permintaan berhasil atau gagal
+
+- Ketika API terpanggil, keluarkan _debug_ statement yang berisi _status code_ dari respons API tidak peduli apakah permintaan berhasil atau gagal
+  
 2. Untuk keperluan _development_, kirimkan respons dengan format sebagai berikut:
+
   ```js
   {
     'data': { ... } // Hasil data dari API, bila respons sukses
