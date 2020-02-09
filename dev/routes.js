@@ -32,7 +32,7 @@ router.post('/api/booking/create_session', async (req, res, next) => {
 
 router.post('/api/booking/cancel_session', (req, res, next) => res.json('hai'))
 router.get('/api/ticketing/available_tickets/:id', async (req, res, next) => {
-  const bookingSessionId = req.query.id
+  const bookingSessionId = req.params.id
 
   try {
     const response = await wrapper.getAvailableTickets(bookingSessionId)
