@@ -73,7 +73,7 @@ module.exports = (allConfig) => {
     },
     // -- Orders APIs --
     getBookingSession: (bookingSessionId, exhibitorCode) => {
-      return require('./src/OrdersApi').getOrderSummary(allConfig, bookingSessionId, exhibitorCode)
+      return require('./src/OrdersApi').getBookingSession(allConfig, bookingSessionId, exhibitorCode)
     }
   }
 }

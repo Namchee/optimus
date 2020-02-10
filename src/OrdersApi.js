@@ -41,10 +41,9 @@ const getBookingSession = async (allConfig, bookingSessionId, exhibitorCode) => 
     'Exhibitor-Code': exhibitorCode,
     'X-Authorization': allConfig.authToken
   }
-  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/orders/BookingSession/${bookingSessionId}`
+  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Orders/BookingSession/${bookingSessionId}`
   try {
     const response = await helper.reqToMobileMoviesAPI('GET', url, header)
-
     mobileMoviesLogger.info(response.status)
 
     return response

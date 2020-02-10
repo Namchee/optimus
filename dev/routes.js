@@ -70,6 +70,21 @@ router.post('/api/ticketing/select_tickets', (req, res, next) => res.json('hai')
 router.get('/api/seating/get_layout/:id', (req, res, next) => res.json('hai'))
 router.post('/api/seating/select_seats', (req, res, next) => res.json('hai'))
 router.post('/api/booking/complete', (req, res, next) => res.json('hai'))
-router.get('/api/orders/booking_session/:id', (req, res, next) => res.json('hai'))
+router.get('/api/orders/booking_session/:id', async (req, res, next) => {
+  const bookingSessionId = req.params.id
+  try {
+    const response = await wrapper.getBookingSession(bookingSessionId)
+    return res.status(response.status).json({
+      data: response.body.data.getBookingSession,
+      error: null
+    })
+  } catch (err) {
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+
+})
 
 module.exports = router

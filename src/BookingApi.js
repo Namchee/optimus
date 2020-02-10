@@ -20,9 +20,6 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
     }
   })
 
-  console.log(memberSessionId)
-  console.log(bookingItemId)
-
   const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Booking/CreateSession`
 
   if (_.isNil(exhibitorCode)) {
