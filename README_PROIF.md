@@ -15,7 +15,7 @@ Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL p
 
 1. ~~POST /api/Booking/CreateSession -> /api/booking/create_session~~ -> Cristopher (done)
 
-2. POST /api/Booking/CancelSession -> /api/booking/cancel_session
+2. ~~POST /api/Booking/CancelSession -> /api/booking/cancel_session~~ -> Stephen (done)
 
 3. ~~GET /api/ticketing/availableTickets/{BookingSessionId} -> /api/ticketing/available_tickets/:id~~ -> Cristopher (done)
 
@@ -29,7 +29,7 @@ Berikut merupakan daftar _endpoint_ yang akan dikerjakan beserta _mapping_ URL p
 
 8. ~~GET /api/Orders/Summary/{externalOrderId}~~ (duplikat)
 
-9. GET /api/Orders/BookingSession/{bookingSessionId} -> /api/orders/booking_session/:id
+9. ~~GET /api/Orders/BookingSession/{bookingSessionId} -> /api/orders/booking_session/:id~~ -> Stephen (done)
 
 Catatan: Seluruh dokumentasi _endpoint_ __SUDAH ADA__ di `docs/swagger.json`
 Buka file tersebut menggunakan [Swagger Editor](https://editor.swagger.io/)
