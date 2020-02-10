@@ -68,8 +68,8 @@ module.exports = (allConfig) => {
       return require('./src/TicketingApi').getAvailableTickets(allConfig, bookingSessionId, exhibitorCode)
     },
     // -- Booking APIs --
-    cancelSession: (bookingItemId, exhibitorCode) => {
-      return require('./src/BookingApi').createSession(allConfig, bookingItemId, exhibitorCode)
+    cancelSession: (bookingSessionId, exhibitorCode) => {
+      return require('./src/BookingApi').cancelSession(allConfig, bookingSessionId, exhibitorCode)
     },
     // -- Orders APIs --
     getBookingSession: (bookingSessionId, exhibitorCode) => {

@@ -20,6 +20,9 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
     }
   })
 
+  console.log(memberSessionId)
+  console.log(bookingItemId)
+
   const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Booking/CreateSession`
 
   if (_.isNil(exhibitorCode)) {
@@ -58,12 +61,12 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
  * @param {String} exhibitorCode Exhibitor's code
  * @return {Promise}
  */
-const cancelSession = async (allConfig, bookingItemId, exhibitorCode) => {
+const cancelSession = async (allConfig, bookingSessionId, exhibitorCode) => {
   mobileMoviesLogger.info({
     category: 'Booking',
     functionName: 'CancelSession',
     params: {
-      bookingItemId
+      bookingSessionId
     }
   })
   const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Booking/CancelSession`
@@ -76,7 +79,7 @@ const cancelSession = async (allConfig, bookingItemId, exhibitorCode) => {
     'X-Authorization': allConfig.authToken
   }
   const body = {
-    bookingItemId
+    bookingSessionId
   }
   try {
     const response = await helper.reqToMobileMoviesAPI('POST', url, header, body)
