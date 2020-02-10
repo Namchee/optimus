@@ -66,6 +66,14 @@ module.exports = (allConfig) => {
     // -- Ticketing APIs--
     getAvailableTickets: (bookingSessionId, exhibitorCode) => {
       return require('./src/TicketingApi').getAvailableTickets(allConfig, bookingSessionId, exhibitorCode)
+    },
+
+    // -- Seating APIs--
+    getLayouts: (bookingSessionId, exhibitorCode) => {
+      return require('./src/SeatingApi').getLayouts(allConfig, bookingSessionId, exhibitorCode)
+    },
+    selectSeats: (id, bookingSessionId, exhibitorCode) => {
+      return require('./src/SeatingApi').selectSeats(allConfig, bookingSessionId, id, exhibitorCode)
     }
   }
 }

@@ -50,8 +50,54 @@ router.get('/api/ticketing/available_tickets/:id', async (req, res, next) => {
 })
 
 router.post('/api/ticketing/select_tickets', (req, res, next) => res.json('hai'))
-router.get('/api/seating/get_layout/:id', (req, res, next) => res.json('hai'))
-router.post('/api/seating/select_seats', (req, res, next) => res.json('hai'))
+router.get('/api/seating/get_layout/:id', async (req, res, next) => {
+  const bookingSessionId = req.params.id
+
+  try {
+    const response = await wrapper.getLayouts(bookingSessionId)
+
+    return res.status(response.status).json({
+      data: {
+        areas: response.body.data.areas,
+        requiredAllocation: response.body.data.requiredAllocation,
+        allocatedSeatSummary: response.body.data.allocatedSeatSummary,
+        layout: response.body.data.layout,
+        relatedElements: response.body.data.relatedElements,
+        bookingSessionId: response.body.data.bookingSessionId
+      },
+      error: null
+    })
+  } catch (err) {
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+})
+
+router.post('/api/seating/select_seats', async (req, res, next) => {
+  const bookingSessionId = req.body.bookingSessionId
+  const id = req.body.id
+
+  console.log("asd")
+  try {
+    const response = await wrapper.selectSeat(bookingSessionId, id)
+
+    return res.status(response.status).json({
+      data: {
+        allocatedSeats: response.body.data.allocatedSeats,
+        order: response.body.data.order
+      },
+      error: null
+    })
+  } catch (err) {
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+})
+
 router.post('/api/booking/complete', (req, res, next) => res.json('hai'))
 router.get('/api/orders/booking_session/:id', (req, res, next) => res.json('hai'))
 
