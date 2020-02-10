@@ -90,7 +90,6 @@ router.post('/api/seating/select_seats', async (req, res, next) => {
       error: null
     })
   } catch (err) {
-    console.log(err)
     return res.status(err.status).json({
       data: null,
       error: err
@@ -98,7 +97,30 @@ router.post('/api/seating/select_seats', async (req, res, next) => {
   }
 })
 
-router.post('/api/booking/complete', (req, res, next) => res.json('hai'))
+router.post('/api/booking/complete', async (req, res, next) => {
+  const paymentProviderValues = req.body.paymentProviderValues
+  const customerDetails = req.body.customerDetails
+  const bookingSessionId = req.body.bookingSessionId
+
+  try {
+    const response = await wrapper.complete(paymentProviderValues, customerDetails, bookingSessionId)
+
+    return res.status(response.status).json({
+      data: {
+        orderId: response.body.data.orderId,
+        order: response.body.data.order,
+        bookingSessionId: response.body.data.bookingSessionId
+      },
+      error: null
+    })
+  } catch (err) {
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+})
+
 router.get('/api/orders/booking_session/:id', (req, res, next) => res.json('hai'))
 
 module.exports = router

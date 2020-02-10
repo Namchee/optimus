@@ -62,6 +62,9 @@ module.exports = (allConfig) => {
     createSession: (memberSessionId, bookingItemId, exhibitorCode) => {
       return require('./src/BookingApi').createSession(allConfig, memberSessionId, bookingItemId, exhibitorCode)
     },
+    complete: (paymentProviderValues, customerDetails, bookingSessionId, exhibitorCode) => {
+      return require('./src/Complete').complete(allConfig, paymentProviderValues, customerDetails, bookingSessionId, exhibitorCode)
+    },
 
     // -- Ticketing APIs--
     getAvailableTickets: (bookingSessionId, exhibitorCode) => {

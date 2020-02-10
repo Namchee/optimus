@@ -52,6 +52,58 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
   }
 }
 
+const complete = async (allConfig, paymentProviderValues, customerDetails, bookingSessionId, exhibitorCode) => {
+  mobileMoviesLogger.info({
+    category: 'Booking',
+    functionName: 'Complete',
+    params: {
+      paymentProviderValues,
+      customerDetails,
+      bookingSessionId
+    }
+  })
+
+  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Booking/Complete`
+
+  if (_.isNil(exhibitorCode)) {
+    exhibitorCode = allConfig.exhibitorCode
+  }
+
+  const header = {
+    returnOrderDetail: true,
+    'Exhibitor-Code': exhibitorCode,
+    'X-Authorization': allConfig.authToken
+  }
+
+  const body = {
+    paymentProviderValues:
+    {
+      additionalProp1,
+      additionalProp2,
+      additionalProp3
+    },
+    customerDetails:
+    {
+      name,
+      email
+    },
+    bookingSessionId
+  }
+
+  try {
+    const response = await helper.reqToMobileMoviesAPI('POST', url, header, body)
+
+    mobileMoviesLogger.info(response.status)
+
+    return response
+  } catch (err) {
+    mobileMoviesLogger.error(err.status)
+
+    throw err
+  }
+}
+
 module.exports = {
-  createSession
+  createSession,
+  complete
 }
