@@ -79,7 +79,6 @@ router.post('/api/seating/select_seats', async (req, res, next) => {
   const bookingSessionId = req.body.bookingSessionId
   const id = req.body.id
 
-  console.log("asd")
   try {
     const response = await wrapper.selectSeat(bookingSessionId, id)
 
@@ -91,6 +90,7 @@ router.post('/api/seating/select_seats', async (req, res, next) => {
       error: null
     })
   } catch (err) {
+    console.log(err)
     return res.status(err.status).json({
       data: null,
       error: err

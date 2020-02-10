@@ -72,8 +72,8 @@ module.exports = (allConfig) => {
     getLayouts: (bookingSessionId, exhibitorCode) => {
       return require('./src/SeatingApi').getLayouts(allConfig, bookingSessionId, exhibitorCode)
     },
-    selectSeats: (id, bookingSessionId, exhibitorCode) => {
-      return require('./src/SeatingApi').selectSeats(allConfig, bookingSessionId, id, exhibitorCode)
+    selectSeat: (id, bookingSessionId, exhibitorCode) => {
+      return require('./src/SeatingApi').selectSeat(allConfig, bookingSessionId, id, exhibitorCode)
     }
   }
 }

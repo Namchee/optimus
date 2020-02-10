@@ -43,10 +43,10 @@ const getLayouts = async (allConfig, bookingSessionId, exhibitorCode) => {
   }
 }
 
-const selectSeats = async (allConfig, bookingSessionId, id, exhibitorCode) => {
+const selectSeat = async (allConfig, bookingSessionId, id, exhibitorCode) => {
   mobileMoviesLogger.info({
     category: 'Seating',
-    functionName: 'SelectSeats',
+    functionName: 'SelectSeat',
     params: {
       id,
       bookingSessionId
@@ -62,13 +62,16 @@ const selectSeats = async (allConfig, bookingSessionId, id, exhibitorCode) => {
     'X-Authorization': allConfig.authToken
   }
   const body = {
-    selectedSeats: [{
-      id
-    }],
+    selectedSeats: [
+      {
+        id
+      }
+    ],
     bookingSessionId
   }
   try {
     const response = await helper.reqToMobileMoviesAPI('POST', url, header, body)
+
     mobileMoviesLogger.info(response.status)
     return response
   } catch (err) {
@@ -79,5 +82,5 @@ const selectSeats = async (allConfig, bookingSessionId, id, exhibitorCode) => {
 
 module.exports = {
   getLayouts,
-  selectSeats
+  selectSeat
 }
