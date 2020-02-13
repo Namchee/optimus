@@ -3,13 +3,12 @@ const helper = require('./common/helper')
 const mobileMoviesLogger = require('./Logger')
 
 /**
- * Returns the seating layout for the screening associated with the supplied bookingSessionId.
+ * A function which returns the seating layout for the screening associated with the supplied bookingSessionId.
  * @param {Object} allConfig Configuration object
  * @param {String} bookingSessionId Booking session's ID
  * @param {String} exhibitorCode Exhibitor's code
  * @return {Promise}
  */
-
 const getLayouts = async (allConfig, bookingSessionId, exhibitorCode) => {
   mobileMoviesLogger.info({
     category: 'Seating',
@@ -43,6 +42,14 @@ const getLayouts = async (allConfig, bookingSessionId, exhibitorCode) => {
   }
 }
 
+/**
+ * A function to sets the selected seats against the booking.
+ * @param {Object} allConfig Configuration object
+ * @param {String} bookingSessionId Booking session's ID
+ * @param {String} id session's ID
+ * @param {String} exhibitorCode Exhibitor's code
+ * @return {Promise}
+ */
 const selectSeat = async (allConfig, bookingSessionId, id, exhibitorCode) => {
   mobileMoviesLogger.info({
     category: 'Seating',

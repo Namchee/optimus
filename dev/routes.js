@@ -49,7 +49,31 @@ router.get('/api/ticketing/available_tickets/:id', async (req, res, next) => {
   }
 })
 
-router.post('/api/ticketing/select_tickets', (req, res, next) => res.json('hai'))
+router.post('/api/ticketing/select_tickets', async (req, res, next) => {
+  const bookingSessionId = req.body.bookingSessionId
+  const id = req.body.id
+
+  try {
+    const response = await wrapper.selectSeat(bookingSessionId, id)
+
+    return res.status(response.status).json({
+      data: {
+        secondToExpiry: response.body.data.secondToExpiry,
+        isAllocatedSeating: response.body.data.isAllocatedSeating,
+        allocatedSeatSummary: response.body.data.allocatedSeatSummary,
+        order: response.body.data.order,
+        bookingSessionId: response.body.bookingItemId
+      },
+      error: null
+    })
+  } catch (err) {
+    return res.status(err.status).json({
+      data: null,
+      error: err
+    })
+  }
+})
+
 router.get('/api/seating/get_layout/:id', async (req, res, next) => {
   const bookingSessionId = req.params.id
 
@@ -85,7 +109,8 @@ router.post('/api/seating/select_seats', async (req, res, next) => {
     return res.status(response.status).json({
       data: {
         allocatedSeats: response.body.data.allocatedSeats,
-        order: response.body.data.order
+        order: response.body.data.order,
+        bookingSessionId: response.body.bookingItemId
       },
       error: null
     })

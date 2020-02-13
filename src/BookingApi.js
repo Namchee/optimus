@@ -52,7 +52,7 @@ const createSession = async (allConfig, memberSessionId, bookingItemId, exhibito
   }
 }
 
-const complete = async (allConfig, paymentProviderValues, customerDetails, bookingSessionId, exhibitorCode) => {
+const complete = async (allConfig, additionalProp1, additionalProp2, additionalProp3, name, email, paymentProviderValues, customerDetails, bookingSessionId, exhibitorCode) => {
   mobileMoviesLogger.info({
     category: 'Booking',
     functionName: 'Complete',
