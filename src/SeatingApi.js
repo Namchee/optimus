@@ -3,22 +3,22 @@ const helper = require('./common/helper')
 const mobileMoviesLogger = require('./Logger')
 
 /**
- * Function to get all available tickets associated with a Booking Session.
+ * A function which returns the seating layout for the screening associated with the supplied bookingSessionId.
  * @param {Object} allConfig Configuration object
  * @param {String} bookingSessionId Booking session's ID
  * @param {String} exhibitorCode Exhibitor's code
  * @return {Promise}
  */
-const getAvailableTickets = async (allConfig, bookingSessionId, exhibitorCode) => {
+const getLayouts = async (allConfig, bookingSessionId, exhibitorCode) => {
   mobileMoviesLogger.info({
-    category: 'Ticketing',
-    functionName: 'AvailableTickets',
+    category: 'Seating',
+    functionName: 'GetLayout',
     params: {
       bookingSessionId
     }
   })
 
-  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Ticketing/AvailableTickets/${bookingSessionId}`
+  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Seating/GetLayout/${bookingSessionId}`
 
   if (_.isNil(exhibitorCode)) {
     exhibitorCode = allConfig.exhibitorCode
@@ -43,25 +43,23 @@ const getAvailableTickets = async (allConfig, bookingSessionId, exhibitorCode) =
 }
 
 /**
- * A function which selects the tickets to associate with the booking session. Any previous tickets will be overwritten.
+ * A function to sets the selected seats against the booking.
  * @param {Object} allConfig Configuration object
- * @param {Object} id session's ID
- * @param {Object} count ticket's count
  * @param {String} bookingSessionId Booking session's ID
+ * @param {String} id session's ID
  * @param {String} exhibitorCode Exhibitor's code
  * @return {Promise}
  */
-const selectTickets = async (allConfig, id, count, bookingSessionId, exhibitorCode) => {
+const selectSeat = async (allConfig, bookingSessionId, id, exhibitorCode) => {
   mobileMoviesLogger.info({
-    category: 'Ticketing',
-    functionName: 'SelectTickets',
+    category: 'Seating',
+    functionName: 'SelectSeat',
     params: {
       id,
-      count,
       bookingSessionId
     }
   })
-  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Ticketing/SelectTickets`
+  const url = `${allConfig.MOBILE_MOVIES_API_URL}/api/Seating/SelectSeats`
 
   if (_.isNil(exhibitorCode)) {
     exhibitorCode = allConfig.exhibitorCode
@@ -71,10 +69,9 @@ const selectTickets = async (allConfig, id, count, bookingSessionId, exhibitorCo
     'X-Authorization': allConfig.authToken
   }
   const body = {
-    tickets: [
+    selectedSeats: [
       {
-        id,
-        count
+        id
       }
     ],
     bookingSessionId
@@ -91,6 +88,6 @@ const selectTickets = async (allConfig, id, count, bookingSessionId, exhibitorCo
 }
 
 module.exports = {
-  getAvailableTickets,
-  selectTickets
+  getLayouts,
+  selectSeat
 }

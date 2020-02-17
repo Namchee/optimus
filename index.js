@@ -62,10 +62,24 @@ module.exports = (allConfig) => {
     createSession: (memberSessionId, bookingItemId, exhibitorCode) => {
       return require('./src/BookingApi').createSession(allConfig, memberSessionId, bookingItemId, exhibitorCode)
     },
+    complete: (additionalProp1, additionalProp2, additionalProp3, name, email, bookingSessionId, exhibitorCode) => {
+      return require('./src/BookingApi').complete(allConfig, additionalProp1, additionalProp2, additionalProp3, name, email, bookingSessionId, exhibitorCode)
+    },
 
     // -- Ticketing APIs--
     getAvailableTickets: (bookingSessionId, exhibitorCode) => {
       return require('./src/TicketingApi').getAvailableTickets(allConfig, bookingSessionId, exhibitorCode)
+    },
+    selectTickets: (id, count, bookingSessionId, exhibitorCode) => {
+      return require('./src/TicketingApi').selectTickets(allConfig, id, count, bookingSessionId, exhibitorCode)
+    },
+
+    // -- Seating APIs--
+    getLayouts: (bookingSessionId, exhibitorCode) => {
+      return require('./src/SeatingApi').getLayouts(allConfig, bookingSessionId, exhibitorCode)
+    },
+    selectSeat: (id, bookingSessionId, exhibitorCode) => {
+      return require('./src/SeatingApi').selectSeat(allConfig, bookingSessionId, id, exhibitorCode)
     }
   }
 }
