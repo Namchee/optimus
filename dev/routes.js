@@ -30,7 +30,24 @@ router.post('/api/booking/create_session', async (req, res, next) => {
   }
 })
 
-router.post('/api/booking/cancel_session', (req, res, next) => res.json('hai'))
+router.post('/api/booking/cancel_session', async (req, res, next) => {
+  const bookingSessionId = req.body.bookingSessionId
+
+  try {
+    const response = await wrapper.cancelSession(bookingSessionId)
+
+    return res.status(response.status).json({
+      data: null, // empty response body
+      error: null
+    })
+  } catch (err) {
+    return {
+      data: null,
+      error: err
+    }
+  }
+})
+
 router.get('/api/ticketing/available_tickets/:id', async (req, res, next) => {
   const bookingSessionId = req.params.id
 
