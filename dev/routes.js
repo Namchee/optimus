@@ -123,18 +123,23 @@ router.post('/api/seating/select_seats', async (req, res, next) => {
 })
 
 router.post('/api/booking/complete', async (req, res, next) => {
-  const paymentProviderValues = req.body.paymentProviderValues
-  const customerDetails = req.body.customerDetails
+  const additionalProp1 = req.body.paymentProviderValues.additionalProp1
+  const additionalProp2 = req.body.paymentProviderValues.additionalProp2
+  const additionalProp3 = req.body.paymentProviderValues.additionalProp3
+  const name = req.body.customerDetails.name
+  const email = req.body.customerDetails.email
   const bookingSessionId = req.body.bookingSessionId
 
   try {
-    const response = await wrapper.complete(paymentProviderValues, customerDetails, bookingSessionId)
+    const response = await wrapper.complete(additionalProp1, additionalProp2, additionalProp3, name, email, bookingSessionId)
 
     return res.status(response.status).json({
       data: {
         orderId: response.body.data.orderId,
         order: response.body.data.order,
-        bookingSessionId: response.body.data.bookingSessionId
+        bookingSessionId: response.body.data.bookingSessionId,
+        name: response.body.data.order.booking.name,
+        email: response.body.data.order.booking.email
       },
       error: null
     })
